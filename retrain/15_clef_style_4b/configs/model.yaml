@@ -1,0 +1,20 @@
+method: clef_style_qwen35_4b
+status: our_reproduction
+base_model: shared/models/qwen3.5-4b
+base_revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+reference_head_config: released/05_clef_flash_9b/weights/architecture/joint_head_config.json
+head:
+  hidden_size: 2560 # Qwen3.5-4B text hidden size; initialize a fresh head
+  width: 1024
+  routing_layers: 2
+  layers: 4
+  heads: 16
+  feedforward: 4096
+backbone:
+  frozen: true
+  vision_frozen: true
+  lora_rank: 256
+  target_modules: configured in train.py; local design choice, exact Cloudflare targets unpublished
+decision:
+  autoregressive: false
+  output: per-question logits over schema-valid options

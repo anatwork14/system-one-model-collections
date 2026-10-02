@@ -1,0 +1,15 @@
+{
+  "downloaded": true,
+  "validated": true,
+  "prepared": true,
+  "examples": 9677,
+  "classes": 64,
+  "source_revision": "2c935438b5506febcfd23e499e3de81868236b17",
+  "checksum_verified": true,
+  "prepared_counts": {
+    "train_known": 5575,
+    "closed": 747,
+    "unknown_absent": 1032,
+    "unseen_supplied": 285
+  }
+}

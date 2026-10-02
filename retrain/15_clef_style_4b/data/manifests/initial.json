@@ -1,0 +1,16 @@
+{
+  "dataset": "clef4b-open-mixture-v1-initial",
+  "source": "shared/datasets/nimble/{train,eval}.jsonl",
+  "split_method": "sha256 family-group assignment; train 80%, calibration 10%, dev 10% of source families",
+  "augmentation": "none; perform only after family split",
+  "label_caveat": "Nimble records are synthetic and model-checked, not fully human-reviewed. Evidence questions use supported/refuted certificates and omit unknown facts.",
+  "counts": {
+    "train": 2150,
+    "calibration": 250,
+    "dev": 276,
+    "test": 324,
+    "canonical": 2676
+  },
+  "families": 1338,
+  "seed": "clef4b-open-mixture-v1"
+}

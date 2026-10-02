@@ -1,0 +1,8 @@
+{
+  "dataset": "cifar10",
+  "splits": {
+    "train": 50000,
+    "test": 10000
+  },
+  "schema": "decision_record.v1"
+}

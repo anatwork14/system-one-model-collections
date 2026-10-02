@@ -1,0 +1,17 @@
+model: Qwen/Qwen3.5-4B-Base
+revision: 1001bb4d826a52d1f399e183466143f4da7b741b
+kev_upstream: ../../released/04_kev_4b/upstream
+data_manifest: ../10_nimble_4b/data/manifests/manifest.json
+backbone_frozen: false
+train_pointer_head: true
+objective: pointer_candidate_cross_entropy
+seed: 17
+epochs: 1
+learning_rate: 1.0e-5
+head_learning_rate: 1.0e-4
+micro_batch_size: 1
+gradient_accumulation: 8
+precision: bf16
+gradient_checkpointing: true
+single_device_fp32_master_offload: true
+status: prepared_recipe_only_no_training

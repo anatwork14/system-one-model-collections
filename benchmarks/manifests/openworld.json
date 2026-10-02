@@ -1,0 +1,16 @@
+{
+  "group": "openworld",
+  "datasets": [
+    "banking77_bolt",
+    "clinc150_bolt",
+    "hwu64_bolt",
+    "stackoverflow_bolt"
+  ],
+  "primary_fold": "known75",
+  "protocols": [
+    "OW-0-closed",
+    "OW-1-unknown-absent",
+    "OW-2-runtime-supplied"
+  ],
+  "status": "prepared_validated"
+}

@@ -1,0 +1,13 @@
+# BOLT CLINC150 protocol protocol
+
+This directory contains protocol metadata only; it owns no raw-data copy.
+
+Materialize `known75` first. Define three derived sets:
+
+- **OW-0 Closed:** candidates are known classes only.
+- **OW-1 Unknown absent:** known classes plus `UNKNOWN`; target is `UNKNOWN` for held-out classes.
+- **OW-2 Runtime supplied:** known classes, the unseen class description, and `UNKNOWN`; target is the supplied unseen class.
+
+The primary split must keep known and unseen class sets disjoint. Record exact BOLT revision, fold, example IDs, and class-description provenance in `splits/`. Never include unseen labels in training class lists.
+
+For this overlay, the pinned BOLT `known75` fold defines class membership, while examples come from the canonical CLINC source referenced by `raw_ref.yaml`. Native CLINC OOS test examples are added only to OW-1 and marked `native_clinc_oos`; they remain separate from BOLT held-out intents. The protocol does not claim BOLT's separately sampled row counts. See `processed/protocol_summary.json` and `splits/known75/split_manifest.json`.

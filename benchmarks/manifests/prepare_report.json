@@ -1,0 +1,147 @@
+{
+  "status": "passed",
+  "datasets": {
+    "jevbench_public": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "original": 72,
+        "easy": 48,
+        "hard": 111
+      },
+      "total_records": 231
+    },
+    "banking77": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "train": 10003,
+        "test": 3080
+      },
+      "total_records": 13083
+    },
+    "clinc150_oos": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "oos_val": 100,
+        "val": 3000,
+        "train": 15000,
+        "oos_test": 1000,
+        "test": 4500,
+        "oos_train": 100
+      },
+      "total_records": 23700
+    },
+    "boolq": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "train": 9427,
+        "validation": 3270
+      },
+      "total_records": 12697
+    },
+    "goemotions": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "train": 1215480,
+        "validation": 151928,
+        "test": 151956
+      },
+      "total_records": 1519364
+    },
+    "when2call": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "test": 3652
+      },
+      "total_records": 3652
+    },
+    "bfcl": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "test": 400,
+        "test_irrelevance": 240
+      },
+      "total_records": 640
+    },
+    "banking77_bolt": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "train_known": 7831,
+        "closed": 2320,
+        "unknown_absent": 3080,
+        "unseen_supplied": 760
+      },
+      "total_records": 13991
+    },
+    "clinc150_bolt": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "train_known": 11200,
+        "closed": 3360,
+        "unknown_absent": 5500,
+        "unseen_supplied": 1140
+      },
+      "total_records": 21200
+    },
+    "hwu64_bolt": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "train_known": 5575,
+        "closed": 747,
+        "unknown_absent": 1032,
+        "unseen_supplied": 285
+      },
+      "total_records": 7639
+    },
+    "stackoverflow_bolt": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "train_known": 8997,
+        "closed": 4493,
+        "unknown_absent": 5991,
+        "unseen_supplied": 1498
+      },
+      "total_records": 20979
+    },
+    "cifar10": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "train": 50000,
+        "test": 10000
+      },
+      "total_records": 60000
+    },
+    "oxford_iiit_pets": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "train": 3680,
+        "test": 3669
+      },
+      "total_records": 7349
+    },
+    "flowers102": {
+      "prepared": true,
+      "validated": true,
+      "records_by_split": {
+        "train": 1020,
+        "validation": 1020,
+        "test": 6149
+      },
+      "total_records": 8189
+    }
+  },
+  "total_normalized_records": 1712714,
+  "record_note": "GoEmotions expands each source example to 28 Noul records. Image records reference rows in raw Parquet files; no image payloads were copied."
+}

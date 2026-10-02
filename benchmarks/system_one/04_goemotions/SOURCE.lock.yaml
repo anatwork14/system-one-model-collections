@@ -1,0 +1,47 @@
+dataset_id: goemotions
+source_type: hub
+source:
+  url: https://huggingface.co/datasets/google-research-datasets/go_emotions
+  revision: add492243ff905527e67aeb8b80c082af02207c3
+  additional_artifacts:
+  - https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_1.csv
+  - https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_2.csv
+  - https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_3.csv
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 58011
+  classes: 28
+raw_hashes:
+  raw/.gitattributes: 40e650854e43f5d4a0efaa68f487161e1226e22bc5480bd0effa0a8dadb5b848
+  raw/README.md: 0a5a9f3a949cce822f6d7453b91433b9fac739187f51ecc665fc5b8a6ec291ba
+  raw/simplified/validation-00000-of-00001.parquet: d46ad5633c4fa41829d22d549743a7bf858d94129536a02af7280c281db5e63a
+  raw/simplified/train-00000-of-00001.parquet: b7d74279616ae7c9b8374ab62ea9f9d6504d36a577bb17f745d720dc2b0d4e76
+  raw/simplified/test-00000-of-00001.parquet: fd0953e535ba2569edc6a1daaa1133f8e4b9071691d540c9bab812fda132bc26
+  raw/raw/train-00000-of-00001.parquet: 5de61486d0b557920f960cbe8b7579f51cdea2d80e74cf647b583967a3642a68
+  raw/.cache/huggingface/.gitignore: 684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1
+  raw/.cache/huggingface/CACHEDIR.TAG: f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d
+  raw/.cache/huggingface/trees/add492243ff905527e67aeb8b80c082af02207c3.json: af2cb413d8790e99d6c538d2e6db5e7de2b07205c7812d71491ab1393cbe11de
+  raw/.cache/huggingface/download/.gitattributes.metadata: c1d5fc5855ff3a671f480f1309c4db3fba231aa5541770672561748fd0dfff64
+  raw/.cache/huggingface/download/README.md.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/.gitattributes.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/README.md.metadata: d3ffbcd83464b40a4f7b8ab22d4c7ce5f567428d08cef1251194fb1b63d0036f
+  raw/.cache/huggingface/download/simplified/train-00000-of-00001.parquet.metadata: 9b6bb5c6f04e9a1f3325d0b459c4a15c2893308b57ff7f1f6459f754b8469e34
+  raw/.cache/huggingface/download/simplified/test-00000-of-00001.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/simplified/validation-00000-of-00001.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/simplified/train-00000-of-00001.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/simplified/test-00000-of-00001.parquet.metadata: c5cdbe6123cf48009195bcb05999b16b9689e78e04e8a8e9aa9ead0ddacebe65
+  raw/.cache/huggingface/download/simplified/validation-00000-of-00001.parquet.metadata: c9909e66f32e450d735b45751448217669b2776406a1315912b3f5227d56f6b5
+  raw/.cache/huggingface/download/raw/train-00000-of-00001.parquet.metadata: 5b849aa04485017352a9c2e60e7ceb1d28c6c558bea998eb3977d66282dfe79a
+  raw/.cache/huggingface/download/raw/train-00000-of-00001.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/goemotions_1.csv: cac049036bad5d68d1081f72b65f2cc51e4df82af05e3e22cfa747051cac1af3
+  raw/goemotions_2.csv: f699ecc5aa425c1720c1d02475f1e41815244b680bd75b282eb770d2c76cd84d
+  raw/goemotions_3.csv: 467f1e7191af00f2e76cc7f425885c2dc304bea8aff284b10e8c460d22f2e1af
+transform_version: v1
+status: downloaded
+notes:
+  raw_unique: true
+  planning_count_examples: 58009
+  observed_unique_ids: 58011
+pinned_at: '2026-10-02'

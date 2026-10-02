@@ -1,0 +1,1 @@
+{"id":"refund-window-smoke-001","state":"The refund window is 30 days. The purchase was made 12 days ago.","question":"Is the purchase still eligible for refund?","options":[{"id":"A","text":"Yes"},{"id":"B","text":"No"},{"id":"C","text":"Insufficient information"}],"expected":"A"}

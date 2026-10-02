@@ -1,0 +1,29 @@
+{
+  "status": "downloaded",
+  "source": "bespokelabsai/nimble",
+  "source_ref": "main (exact commit in method ARTIFACTS.lock)",
+  "counts": {
+    "train.jsonl": 2676,
+    "eval.jsonl": 324,
+    "manifest.json": null
+  },
+  "files": [
+    {
+      "path": "eval.jsonl",
+      "size_bytes": 3880844,
+      "sha256": "8e9e48b8de5206593912ae01ddc95bd77e40ad2ecf4c9292c1711290eca0d896"
+    },
+    {
+      "path": "manifest.json",
+      "size_bytes": 1146679,
+      "sha256": "d945ebfbe535ce066db5b1f342b54b168ee1ba90d822a18c2822d3cffc4629cf"
+    },
+    {
+      "path": "train.jsonl",
+      "size_bytes": 30536617,
+      "sha256": "beadbb9b81837f7c339e090cd210ce91f65a55f2a3ada1ce9b623765b8d6fe2e"
+    }
+  ],
+  "label_origin": "synthetic/model-checked; not human-reviewed",
+  "evaluation_use": "frozen holdout; never used for training/model selection"
+}

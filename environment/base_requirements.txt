@@ -1,0 +1,16 @@
+huggingface_hub[cli]>=0.30
+transformers>=5.0
+accelerate>=1.4
+datasets>=3.3
+peft>=0.14
+safetensors>=0.5
+sentencepiece>=0.2
+scikit-learn>=1.6
+pandas>=2.2
+numpy>=2.0
+pyyaml>=6.0
+jsonlines>=4.0
+torch>=2.6
+fastapi>=0.115
+uvicorn>=0.30
+typesafe-sdk>=0.6.0

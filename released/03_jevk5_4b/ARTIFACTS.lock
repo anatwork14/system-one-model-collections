@@ -1,0 +1,61 @@
+format: 1
+method: jevk5-4b
+status: Published merged checkpoint
+source:
+  repo: https://github.com/allebee/jevk5
+  ref: main
+  commit: f26426d16f59e8bbe1470e5b162cc89329e29b29
+  resolved_ref: main
+base:
+  model: Qwen/Qwen3.5-4B
+  revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+checkpoint:
+  model: alibiserikbay/JevK5
+  revision: c4f7fdb3aeab5582336406e78d3bef11bf98833d
+  files:
+  - path: .gitattributes
+    size_bytes: 1570
+    sha256: 34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930
+  - path: .workspace-revision
+    size_bytes: 41
+    sha256: 3f4766da77a0976d50858597889a9e895b769d4bc5b28b0589d45fdcfc07ae99
+  - path: README.md
+    size_bytes: 14966
+    sha256: ae04e164af42c70837b1e79a5d5414c3b9c5641a7651047223756404fd6a2786
+  - path: SHA256SUMS
+    size_bytes: 666
+    sha256: 07d0662824a3dfbb43d45dbe1c9083e97ecb4291997238f6b97619044d2eba86
+  - path: chat_template.jinja
+    size_bytes: 7756
+    sha256: a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715
+  - path: config.json
+    size_bytes: 1979
+    sha256: 63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724
+  - path: generation_config.json
+    size_bytes: 116
+    sha256: 62153eb6c69f2e1f426beaa8002b7186437e949c7588167085df14e10e9c0a73
+  - path: jevk5_config.json
+    size_bytes: 52
+    sha256: 0d689fd13d15dc962265e2ae10b56359706ab5d05ad24e00e6334e4c19cf83d2
+  - path: model.safetensors
+    size_bytes: 8411558400
+    sha256: 13824e47f2e40fe052f06943976cf742cb366ba305741a111e75a8ebae907a9c
+  - path: tokenizer.json
+    size_bytes: 19989325
+    sha256: 06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523
+  - path: tokenizer_config.json
+    size_bytes: 1125
+    sha256: 9cf04fffe3d8c3b85e439fb35c7acad0761ab51c422a8c4256d9f887c3a0be7d
+data:
+  recipe: v0.3 teacher + public replay
+  manifest: data/manifests/manifest.json
+  hashes:
+    manifest_sha256: 69c3e8930b7602ed8922348772081d56862e4446fa0b0b4e0e84da8149d826de
+    files:
+    - path: manifests/manifest.json
+      size_bytes: 126
+      sha256: 69c3e8930b7602ed8922348772081d56862e4446fa0b0b4e0e84da8149d826de
+downloaded_at: '2026-10-01T16:37:33+00:00'
+local_changes:
+- local method documentation/configs/scripts only
+- upstream source remains unmodified

@@ -1,0 +1,8 @@
+{
+  "dataset": "bfcl",
+  "splits": {
+    "test": 400,
+    "test_irrelevance": 240
+  },
+  "schema": "decision_record.v1"
+}

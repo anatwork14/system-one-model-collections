@@ -1,0 +1,8 @@
+{
+  "dataset": "boolq",
+  "splits": {
+    "train": 9427,
+    "validation": 3270
+  },
+  "schema": "decision_record.v1"
+}

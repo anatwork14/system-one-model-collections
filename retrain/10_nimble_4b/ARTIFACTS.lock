@@ -1,0 +1,48 @@
+format: 1
+method: nimble-4b_reproduction
+status: Proposed reproduction; not trained
+source:
+  repo: https://github.com/bespokelabsai/nimble
+  ref: main
+  commit: 62076b4f2d365b5879dafcf7f6dd072a1fe76df7
+  resolved_ref: main
+base:
+  model: Qwen/Qwen3.5-4B
+  revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+checkpoint:
+  model: none; official checkpoint is Qwen3.5-9B based
+  revision: null
+data:
+  recipe: 2,676 train + 324 held-out
+  manifest: data/manifests/manifest.json
+  hashes:
+    manifest_sha256: 2f3c9343c4143260f584f6fed50480f063b51c1aec929519cb7b542bd88b4def
+    files:
+    - path: manifests/manifest.json
+      size_bytes: 847
+      sha256: 2f3c9343c4143260f584f6fed50480f063b51c1aec929519cb7b542bd88b4def
+    - path: processed/kev_eval.jsonl
+      size_bytes: 739218
+      sha256: 8998ef6cd4bf9b0f112c11300e47169c3c72212ae2f01979bfa3134e241efb23
+    - path: processed/kev_train.jsonl
+      size_bytes: 5858649
+      sha256: b80e899e93ee5d07a9aeea87b148e9ae73fc01b59d172357b40586af0057c2e4
+    - path: raw/eval.jsonl
+      size_bytes: 3880844
+      sha256: 8e9e48b8de5206593912ae01ddc95bd77e40ad2ecf4c9292c1711290eca0d896
+    - path: raw/manifest.json
+      size_bytes: 1146679
+      sha256: d945ebfbe535ce066db5b1f342b54b168ee1ba90d822a18c2822d3cffc4629cf
+    - path: raw/train.jsonl
+      size_bytes: 30536617
+      sha256: beadbb9b81837f7c339e090cd210ce91f65a55f2a3ada1ce9b623765b8d6fe2e
+    - path: splits/frozen_eval_ids.txt
+      size_bytes: 10816
+      sha256: 4504744bf8546f2481a3ff3193fcdbb10381560065452a50270359484bfd0403
+    - path: splits/train_ids.txt
+      size_bytes: 89184
+      sha256: 5158ec864719ee67a595c49ba9b14c0c7911f69e18c303fc7fbace0a17c28799
+downloaded_at: '2026-10-01T16:37:33+00:00'
+local_changes:
+- local method documentation/configs/scripts only
+- upstream source remains unmodified

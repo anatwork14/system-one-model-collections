@@ -1,0 +1,21 @@
+dataset_id: clinc150_bolt
+source_type: git
+source:
+  url: https://github.com/CNIC-DSL/BOLT.git
+  revision: 2c935438b5506febcfd23e499e3de81868236b17
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 22495
+  classes: 150
+raw_hashes: {}
+transform_version: v1
+status: prepared
+notes:
+  raw_unique: false
+  protocol_hashes:
+    splits/known75/clinc_label.list: a9263ab722f11dca290fde190bbd389dd0d1422234b97aeec1d43571ea078ff4
+    splits/known75/clinc_label_known_0.75.list: 23052ea30255eaa89c03fd93d2e9a392227393b953678e5be18d6e192079ffa6
+  protocol_artifacts_pinned: true
+pinned_at: '2026-10-02'

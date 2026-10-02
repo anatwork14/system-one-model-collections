@@ -1,0 +1,8 @@
+status: not_started
+variants:
+  - {id: V0, vision: frozen, language: frozen, head: direct_logits}
+  - {id: V1, vision: frozen, language: frozen, head: decision_head}
+  - {id: V2, vision: frozen, language: lora, head: decision_head}
+  - {id: V3, vision: connector_trainable, language: lora, head: decision_head}
+  - {id: V4, vision: upper_blocks_trainable, language: lora, head: decision_head}
+  - {id: V5, vision: full_finetune, language: full_finetune, head: decision_head}

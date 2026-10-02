@@ -1,0 +1,24 @@
+dataset_id: stackoverflow_bolt
+source_type: git
+source:
+  url: https://github.com/CNIC-DSL/BOLT.git
+  revision: 2c935438b5506febcfd23e499e3de81868236b17
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 19985
+  classes: 20
+raw_hashes:
+  raw/origin_data/dev.tsv: e1d61426103493cf94e48b7931cc9619be4c347f19c2e3aef9b1fa0dde8cea52
+  raw/origin_data/test.tsv: b95917b268254b43361659ddb96332148092de6dd158e4c931656a494d658fcf
+  raw/origin_data/train.tsv: 492de2622bcebb42607871982e096504d9993ae0f4167beeef0353d7ac2ad51e
+transform_version: v1
+status: prepared
+notes:
+  raw_unique: true
+  protocol_hashes:
+    splits/known75/stackoverflow_label.list: 3acde46d7926d8c5d6382e34bb6d438418831c9b0bb11989841635b47a4a7792
+    splits/known75/stackoverflow_label_known_0.75.list: 66f0ac0e3e8870d4ccf502bec2009f146fe2e903f60f02beb0c412d63165ef39
+  protocol_artifacts_pinned: true
+pinned_at: '2026-10-02'

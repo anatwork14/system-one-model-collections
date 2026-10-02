@@ -1,0 +1,8 @@
+{
+  "dataset": "banking77",
+  "splits": {
+    "train": 10003,
+    "test": 3080
+  },
+  "schema": "decision_record.v1"
+}

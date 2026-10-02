@@ -1,0 +1,4 @@
+calibration_source: data/calibration/nimble.jsonl
+metrics: [accuracy, nll, brier, ece, aurc]
+calibration_method: report_only_initially
+note: Softmax probabilities are not assumed calibrated; fit any temperature only on the calibration split.

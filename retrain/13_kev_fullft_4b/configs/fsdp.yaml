@@ -1,0 +1,7 @@
+distributed_backend: fsdp
+mixed_precision: bf16
+sharding_strategy: full_shard
+cpu_offload: false
+activation_checkpointing: true
+limit_all_gathers: true
+status: template_requires_target_host_review

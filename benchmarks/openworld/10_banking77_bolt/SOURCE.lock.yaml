@@ -1,0 +1,21 @@
+dataset_id: banking77_bolt
+source_type: git
+source:
+  url: https://github.com/CNIC-DSL/BOLT.git
+  revision: 2c935438b5506febcfd23e499e3de81868236b17
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 13072
+  classes: 77
+raw_hashes: {}
+transform_version: v1
+status: prepared
+notes:
+  raw_unique: false
+  protocol_hashes:
+    splits/known75/banking_label.list: c9d7ecf311f8ae5694270c26c3a976a38c792f5d8f750c6f3b09f584d02051cd
+    splits/known75/banking_label_known_0.75.list: 3f3790b79cde91e7a9cf5ad609ddd618631e83ed21a21539627155fd8c904c83
+  protocol_artifacts_pinned: true
+pinned_at: '2026-10-02'

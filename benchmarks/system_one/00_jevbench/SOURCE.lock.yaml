@@ -1,0 +1,20 @@
+dataset_id: jevbench_public
+source_type: git
+source:
+  url: https://github.com/fstandhartinger/jevbench.git
+  revision: bb05a335bc809e61b20c0f745d25499a82b326fc
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 231
+  classes: null
+raw_hashes:
+  raw/public/hard.jsonl: 89e9e6becb33ed88c1de7d42dcc87531b2fb64cfaef4e1986faf7c37b3f80ebb
+  raw/public/original.jsonl: 5c2414edb3006b8bfcb70fda433f0f9ca015759433849f8d3104328a1f7c4180
+  raw/public/easy.jsonl: 231df3c2c8e88a1a8c137ebe85de96ba70fabd330849098ac7b3c52c70b7172b
+transform_version: v1
+status: pinned
+notes:
+  raw_unique: true
+pinned_at: '2026-10-02'

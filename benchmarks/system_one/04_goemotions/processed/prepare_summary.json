@@ -1,0 +1,9 @@
+{
+  "dataset": "goemotions",
+  "splits": {
+    "train": 1215480,
+    "validation": 151928,
+    "test": 151956
+  },
+  "schema": "decision_record.v1"
+}

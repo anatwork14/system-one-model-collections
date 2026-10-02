@@ -1,0 +1,18 @@
+dataset_id: clinc150_oos
+source_type: git
+source:
+  url: https://github.com/clinc/oos-eval.git
+  revision: 828f8093932c8fe6ca7936c3d2e52903b1c523de
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 23700
+  classes: 150
+raw_hashes:
+  raw/data_full.json: 36923c3705a59e08fe9c3883d8bc2dd966ef93e22cb78ac41171782a698d56e0
+transform_version: v1
+status: pinned
+notes:
+  raw_unique: true
+pinned_at: '2026-10-02'

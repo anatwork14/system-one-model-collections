@@ -1,0 +1,32 @@
+dataset_id: boolq
+source_type: hub
+source:
+  url: https://huggingface.co/datasets/google/boolq
+  revision: 35b264d03638db9f4ce671b711558bf7ff0f80d5
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 12697
+  classes: null
+raw_hashes:
+  raw/.gitattributes: 40e650854e43f5d4a0efaa68f487161e1226e22bc5480bd0effa0a8dadb5b848
+  raw/README.md: 07447668f46c7c1e62e24b650ea2a73f1ab34f2b3759b1587c7b7a81b4bf1cf4
+  raw/data/validation-00000-of-00001.parquet: 52355d11524b4b874a9b9dcc278feb10f672d52c4f4eff9872e695ede59820f8
+  raw/data/train-00000-of-00001.parquet: 4f028e992c0bd4df30b9f056f4946b64f5c23028034ff0ed5ea467d8538cc623
+  raw/.cache/huggingface/.gitignore: 684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1
+  raw/.cache/huggingface/CACHEDIR.TAG: f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d
+  raw/.cache/huggingface/trees/35b264d03638db9f4ce671b711558bf7ff0f80d5.json: b1ea241c61ef0cb2dfe00105675053bcb7ec561b250fc3accde10ca8f9f5b954
+  raw/.cache/huggingface/download/.gitattributes.metadata: 0437885f7bf40abcdb3e75c9dff296cbd6279de49af427e960df9d337b14a600
+  raw/.cache/huggingface/download/README.md.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/.gitattributes.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/README.md.metadata: cfa1175b9c762ac507adaa5afb344abd204f23adbf176d2a88ac24282733ca5d
+  raw/.cache/huggingface/download/data/train-00000-of-00001.parquet.metadata: c0edeb91021a0b89ef6517b7ad5ee0e4980f895675d0f25ebbfb20c826a4da1f
+  raw/.cache/huggingface/download/data/validation-00000-of-00001.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/data/train-00000-of-00001.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/data/validation-00000-of-00001.parquet.metadata: 0a46c674dc1fa4b13940963befc02ceae06207d47ea5fa218d7ef1d2835e73c4
+transform_version: v1
+status: pinned
+notes:
+  raw_unique: true
+pinned_at: '2026-10-02'

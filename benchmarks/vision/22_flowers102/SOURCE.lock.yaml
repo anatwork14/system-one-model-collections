@@ -1,0 +1,39 @@
+dataset_id: flowers102
+source_type: artifact
+source:
+  url: https://www.robots.ox.ac.uk/~vgg/data/flowers/102/
+  revision: sha256:1d7fdbd27dddc71945cb19de5e68a5b459fd8010ab0f62607e61d688ab76ed7d
+  transfer:
+    type: pinned_hub_mirror
+    url: https://huggingface.co/datasets/Donghyun99/Oxford-Flower-102
+    revision: 7e43fe37eeb9278138ab0bd2d0abb10d0f703d09
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 8189
+  classes: 102
+raw_hashes:
+  raw/.gitattributes: a2bdf429c1bc3858213bb4b7a748fa36a71536a5a1ff98861281853c3c2be1f2
+  raw/README.md: 713a9ab26dd578492af38efda0be602d85b7e6c5fa06a26946509d59da2cc816
+  raw/data/test-00000-of-00001-1cc6f065cd5391ec.parquet: 1cf2e854c1d870bffcca9326b82dc2dca23ce2aca73d6ad943f43af9a3954035
+  raw/data/train-00000-of-00001-95813d8dab877ff5.parquet: 37612eb6ade6dcbdeafde4d204a92949cbc5216fa2f84975b5fb481471f8d448
+  raw/data/validation-00000-of-00001-a2ccf8138610462c.parquet: f06a149f7f6ba2c72b09283953bdb60590b8f74f3baba9794b7a4b494689da1c
+  raw/.cache/huggingface/.gitignore: 684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1
+  raw/.cache/huggingface/CACHEDIR.TAG: f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d
+  raw/.cache/huggingface/trees/7e43fe37eeb9278138ab0bd2d0abb10d0f703d09.json: 7701ef70aeb4c20e248ac4f2bf1f8487c1c4abf9ac1c46da3a341893d161475c
+  raw/.cache/huggingface/download/.gitattributes.metadata: 8f6ade048c9e643a3f8a429cda3c5b39d33ea5d2021a26420bc4607949cf7822
+  raw/.cache/huggingface/download/README.md.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/.gitattributes.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/README.md.metadata: 4bbc3941ba02d282781c570ddcb740c8212ede08ca22b147f6d5c7cb2a544f6a
+  raw/.cache/huggingface/download/data/test-00000-of-00001-1cc6f065cd5391ec.parquet.metadata: 6b0b2ba700392ff200b8538a62719620fe0e6bfe0e291efc094b29af2306646c
+  raw/.cache/huggingface/download/data/train-00000-of-00001-95813d8dab877ff5.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/data/test-00000-of-00001-1cc6f065cd5391ec.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/data/train-00000-of-00001-95813d8dab877ff5.parquet.metadata: 2120d18b2f8dccf60c5eb05b91291174f2675a2331a4b0ea54d6263df290c50c
+  raw/.cache/huggingface/download/data/validation-00000-of-00001-a2ccf8138610462c.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/data/validation-00000-of-00001-a2ccf8138610462c.parquet.metadata: 6ce2761d9abf3cf5913599bcc6229d459ad22d8ccaa62d93409bbe898da4e1de
+transform_version: v1
+status: downloaded
+notes:
+  raw_unique: true
+pinned_at: '2026-10-02'

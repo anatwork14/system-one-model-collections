@@ -1,0 +1,22 @@
+{
+  "dataset": "hwu64_bolt",
+  "fold": "known75",
+  "classes": [
+    "qa_definition",
+    "qa_factoid",
+    "qa_maths",
+    "qa_stock",
+    "recommendation_events",
+    "recommendation_locations",
+    "recommendation_movies",
+    "social_post",
+    "social_query",
+    "takeaway_order",
+    "takeaway_query",
+    "transport_query",
+    "transport_taxi",
+    "transport_ticket",
+    "transport_traffic",
+    "weather_query"
+  ]
+}

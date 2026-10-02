@@ -1,0 +1,123 @@
+evidence_layers.0.attention.in_proj_bias	(3072,)	BF16	3072
+evidence_layers.0.attention.in_proj_weight	(3072, 1024)	BF16	3145728
+evidence_layers.0.attention.out_proj.bias	(1024,)	BF16	1024
+evidence_layers.0.attention.out_proj.weight	(1024, 1024)	BF16	1048576
+evidence_layers.0.feedforward.0.bias	(4096,)	BF16	4096
+evidence_layers.0.feedforward.0.weight	(4096, 1024)	BF16	4194304
+evidence_layers.0.feedforward.3.bias	(1024,)	BF16	1024
+evidence_layers.0.feedforward.3.weight	(1024, 4096)	BF16	4194304
+evidence_layers.0.feedforward_norm.bias	(1024,)	BF16	1024
+evidence_layers.0.feedforward_norm.weight	(1024,)	BF16	1024
+evidence_layers.0.memory_norm.bias	(1024,)	BF16	1024
+evidence_layers.0.memory_norm.weight	(1024,)	BF16	1024
+evidence_layers.0.query_norm.bias	(1024,)	BF16	1024
+evidence_layers.0.query_norm.weight	(1024,)	BF16	1024
+evidence_layers.1.attention.in_proj_bias	(3072,)	BF16	3072
+evidence_layers.1.attention.in_proj_weight	(3072, 1024)	BF16	3145728
+evidence_layers.1.attention.out_proj.bias	(1024,)	BF16	1024
+evidence_layers.1.attention.out_proj.weight	(1024, 1024)	BF16	1048576
+evidence_layers.1.feedforward.0.bias	(4096,)	BF16	4096
+evidence_layers.1.feedforward.0.weight	(4096, 1024)	BF16	4194304
+evidence_layers.1.feedforward.3.bias	(1024,)	BF16	1024
+evidence_layers.1.feedforward.3.weight	(1024, 4096)	BF16	4194304
+evidence_layers.1.feedforward_norm.bias	(1024,)	BF16	1024
+evidence_layers.1.feedforward_norm.weight	(1024,)	BF16	1024
+evidence_layers.1.memory_norm.bias	(1024,)	BF16	1024
+evidence_layers.1.memory_norm.weight	(1024,)	BF16	1024
+evidence_layers.1.query_norm.bias	(1024,)	BF16	1024
+evidence_layers.1.query_norm.weight	(1024,)	BF16	1024
+field_norm.bias	(1024,)	BF16	1024
+field_norm.weight	(1024,)	BF16	1024
+global_projection.weight	(1024, 4096)	BF16	4194304
+hidden_norm.bias	(4096,)	BF16	4096
+hidden_norm.weight	(4096,)	BF16	4096
+joint_logit_scale	()	BF16	1
+layers.0.linear1.bias	(4096,)	BF16	4096
+layers.0.linear1.weight	(4096, 1024)	BF16	4194304
+layers.0.linear2.bias	(1024,)	BF16	1024
+layers.0.linear2.weight	(1024, 4096)	BF16	4194304
+layers.0.multihead_attn.in_proj_bias	(3072,)	BF16	3072
+layers.0.multihead_attn.in_proj_weight	(3072, 1024)	BF16	3145728
+layers.0.multihead_attn.out_proj.bias	(1024,)	BF16	1024
+layers.0.multihead_attn.out_proj.weight	(1024, 1024)	BF16	1048576
+layers.0.norm1.bias	(1024,)	BF16	1024
+layers.0.norm1.weight	(1024,)	BF16	1024
+layers.0.norm2.bias	(1024,)	BF16	1024
+layers.0.norm2.weight	(1024,)	BF16	1024
+layers.0.norm3.bias	(1024,)	BF16	1024
+layers.0.norm3.weight	(1024,)	BF16	1024
+layers.0.self_attn.in_proj_bias	(3072,)	BF16	3072
+layers.0.self_attn.in_proj_weight	(3072, 1024)	BF16	3145728
+layers.0.self_attn.out_proj.bias	(1024,)	BF16	1024
+layers.0.self_attn.out_proj.weight	(1024, 1024)	BF16	1048576
+layers.1.linear1.bias	(4096,)	BF16	4096
+layers.1.linear1.weight	(4096, 1024)	BF16	4194304
+layers.1.linear2.bias	(1024,)	BF16	1024
+layers.1.linear2.weight	(1024, 4096)	BF16	4194304
+layers.1.multihead_attn.in_proj_bias	(3072,)	BF16	3072
+layers.1.multihead_attn.in_proj_weight	(3072, 1024)	BF16	3145728
+layers.1.multihead_attn.out_proj.bias	(1024,)	BF16	1024
+layers.1.multihead_attn.out_proj.weight	(1024, 1024)	BF16	1048576
+layers.1.norm1.bias	(1024,)	BF16	1024
+layers.1.norm1.weight	(1024,)	BF16	1024
+layers.1.norm2.bias	(1024,)	BF16	1024
+layers.1.norm2.weight	(1024,)	BF16	1024
+layers.1.norm3.bias	(1024,)	BF16	1024
+layers.1.norm3.weight	(1024,)	BF16	1024
+layers.1.self_attn.in_proj_bias	(3072,)	BF16	3072
+layers.1.self_attn.in_proj_weight	(3072, 1024)	BF16	3145728
+layers.1.self_attn.out_proj.bias	(1024,)	BF16	1024
+layers.1.self_attn.out_proj.weight	(1024, 1024)	BF16	1048576
+layers.2.linear1.bias	(4096,)	BF16	4096
+layers.2.linear1.weight	(4096, 1024)	BF16	4194304
+layers.2.linear2.bias	(1024,)	BF16	1024
+layers.2.linear2.weight	(1024, 4096)	BF16	4194304
+layers.2.multihead_attn.in_proj_bias	(3072,)	BF16	3072
+layers.2.multihead_attn.in_proj_weight	(3072, 1024)	BF16	3145728
+layers.2.multihead_attn.out_proj.bias	(1024,)	BF16	1024
+layers.2.multihead_attn.out_proj.weight	(1024, 1024)	BF16	1048576
+layers.2.norm1.bias	(1024,)	BF16	1024
+layers.2.norm1.weight	(1024,)	BF16	1024
+layers.2.norm2.bias	(1024,)	BF16	1024
+layers.2.norm2.weight	(1024,)	BF16	1024
+layers.2.norm3.bias	(1024,)	BF16	1024
+layers.2.norm3.weight	(1024,)	BF16	1024
+layers.2.self_attn.in_proj_bias	(3072,)	BF16	3072
+layers.2.self_attn.in_proj_weight	(3072, 1024)	BF16	3145728
+layers.2.self_attn.out_proj.bias	(1024,)	BF16	1024
+layers.2.self_attn.out_proj.weight	(1024, 1024)	BF16	1048576
+layers.3.linear1.bias	(4096,)	BF16	4096
+layers.3.linear1.weight	(4096, 1024)	BF16	4194304
+layers.3.linear2.bias	(1024,)	BF16	1024
+layers.3.linear2.weight	(1024, 4096)	BF16	4194304
+layers.3.multihead_attn.in_proj_bias	(3072,)	BF16	3072
+layers.3.multihead_attn.in_proj_weight	(3072, 1024)	BF16	3145728
+layers.3.multihead_attn.out_proj.bias	(1024,)	BF16	1024
+layers.3.multihead_attn.out_proj.weight	(1024, 1024)	BF16	1048576
+layers.3.norm1.bias	(1024,)	BF16	1024
+layers.3.norm1.weight	(1024,)	BF16	1024
+layers.3.norm2.bias	(1024,)	BF16	1024
+layers.3.norm2.weight	(1024,)	BF16	1024
+layers.3.norm3.bias	(1024,)	BF16	1024
+layers.3.norm3.weight	(1024,)	BF16	1024
+layers.3.self_attn.in_proj_bias	(3072,)	BF16	3072
+layers.3.self_attn.in_proj_weight	(3072, 1024)	BF16	3145728
+layers.3.self_attn.out_proj.bias	(1024,)	BF16	1024
+layers.3.self_attn.out_proj.weight	(1024, 1024)	BF16	1048576
+memory_projection.weight	(1024, 4096)	BF16	4194304
+option_context_projection.weight	(1024, 4096)	BF16	4194304
+option_lexical_projection.weight	(1024, 4096)	BF16	4194304
+option_norm.bias	(1024,)	BF16	1024
+option_norm.weight	(1024,)	BF16	1024
+option_question_projection.weight	(1024, 4096)	BF16	4194304
+option_summary_norm.bias	(1024,)	BF16	1024
+option_summary_norm.weight	(1024,)	BF16	1024
+prior_logit_scale	()	BF16	1
+question_projection.weight	(1024, 4096)	BF16	4194304
+residual_gate	()	BF16	1
+residual_scorer.0.bias	(1024,)	BF16	1024
+residual_scorer.0.weight	(1024, 4096)	BF16	4194304
+residual_scorer.3.bias	(1,)	BF16	1
+residual_scorer.3.weight	(1, 1024)	BF16	1024
+type_embedding.weight	(3, 1024)	BF16	3072
+TOTAL	parameters=121762820

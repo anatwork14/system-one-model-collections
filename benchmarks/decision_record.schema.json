@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:system-one:benchmark:decision-record:v1",
+  "title": "System-One benchmark decision record",
+  "type": "object",
+  "required": ["id", "state", "question", "target", "metadata"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "state": {
+      "type": "object",
+      "properties": {
+        "text": {"type": "string"},
+        "image": {"type": "string"},
+        "passage": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "question": {
+      "type": "object",
+      "required": ["id", "type", "instructions"],
+      "properties": {
+        "id": {"type": "string"},
+        "type": {"enum": ["choice", "score", "noul"]},
+        "instructions": {"type": "string"},
+        "criteria": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "target": {},
+    "metadata": {
+      "type": "object",
+      "required": ["dataset", "split"],
+      "properties": {
+        "dataset": {"type": "string"},
+        "split": {"type": "string"},
+        "source_id": {"type": ["string", "integer"]},
+        "fold": {"type": "string"},
+        "protocol": {"type": "string"}
+      },
+      "additionalProperties": true
+    }
+  }
+}

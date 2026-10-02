@@ -1,0 +1,15 @@
+{
+  "group": "vision",
+  "datasets": [
+    "cifar10",
+    "oxford_iiit_pets",
+    "flowers102"
+  ],
+  "class_cardinality": [
+    10,
+    37,
+    102
+  ],
+  "training_allowed": false,
+  "status": "prepared_validated"
+}

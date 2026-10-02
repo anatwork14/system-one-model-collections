@@ -1,0 +1,34 @@
+dataset_id: banking77
+source_type: git
+source:
+  url: https://github.com/PolyAI-LDN/task-specific-datasets
+  revision: 57ec275d8078af65b7731c2a98be812d844a6d6b
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 13083
+  classes: 77
+raw_hashes:
+  raw/dataset_infos.json: 402fed10f4894f8989dffeca0a81572ca488e6488fac3f18a33d9fd32422acc7
+  raw/.gitattributes: c16b7ce3cc1b9e89f2da9d83012ae183208eaf99ae6c2b138c91ef551fe15861
+  raw/banking77.py: 0e2b20c18def828886300332b15c6f647b77cdc289d1b49fffe65d8fde1d0834
+  raw/README.md: b494ae99274ad98adfedfefcb504469197a8732f9726f678320f4aaafc5502bf
+  raw/.cache/huggingface/.gitignore: 684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1
+  raw/.cache/huggingface/CACHEDIR.TAG: f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d
+  raw/.cache/huggingface/trees/90d4e2ee5521c04fc1488f065b8b083658768c57.json: 0d9f8479510690b26ea83c1273d20191ca1906e8a9de95f50403972a43db61ae
+  raw/.cache/huggingface/download/dataset_infos.json.metadata: c4cf3c091ad1ac17b55ff7d27f3bf3dff1bf5c2a9fdef4266b0fa7d226550983
+  raw/.cache/huggingface/download/.gitattributes.metadata: bf7a8a239bc98a3d7925cec6f2b5098803b8dc72bee1d0b56a0c35c5422f7986
+  raw/.cache/huggingface/download/banking77.py.metadata: bdf681a773a7fedd54de7615e8197b59de1cf0c62e203fd636d8925be9a5128f
+  raw/.cache/huggingface/download/README.md.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/dataset_infos.json.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/.gitattributes.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/banking77.py.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/README.md.metadata: fd795b0bf0912580c64fdd6df56849ec3935463b5ef622a1fdab4258fad96501
+  raw/test.csv: d12d6e3bc4c3103966ae786dc435913c0c563dfa328f5a3646d0e62cfeeb474d
+  raw/train.csv: b06e26ac675513959a63135f11b94ea7786ed02da65db93a5650d8838cbc664b
+transform_version: v1
+status: downloaded
+notes:
+  raw_unique: true
+pinned_at: '2026-10-02'

@@ -1,0 +1,8 @@
+{
+  "dataset": "oxford_iiit_pets",
+  "splits": {
+    "train": 3680,
+    "test": 3669
+  },
+  "schema": "decision_record.v1"
+}

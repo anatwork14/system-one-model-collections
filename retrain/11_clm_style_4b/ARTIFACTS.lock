@@ -1,0 +1,33 @@
+format: 1
+method: clm-style-4b_reproduction
+status: Proposed controlled reproduction; not trained
+source:
+  repo: https://github.com/Contrastive-LM/CLM
+  ref: main
+  commit: bb42c6c5bf914fd449bed2f6ca65be80602cb1f7
+  resolved_ref: main
+base:
+  model: Qwen/Qwen3.5-4B
+  revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+checkpoint:
+  model: none
+  revision: null
+data:
+  recipe: controlled Nimble-derived pairs
+  manifest: data/manifests/manifest.json
+  hashes:
+    manifest_sha256: 69c3e8930b7602ed8922348772081d56862e4446fa0b0b4e0e84da8149d826de
+    files:
+    - path: manifests/manifest.json
+      size_bytes: 126
+      sha256: 69c3e8930b7602ed8922348772081d56862e4446fa0b0b4e0e84da8149d826de
+    - path: processed/eval_pairs.jsonl
+      size_bytes: 745426
+      sha256: 1505a2c4cf54cfc43511cf0c461b2437c0d23973a10d95824fed31f65748e87b
+    - path: processed/train_pairs.jsonl
+      size_bytes: 5936351
+      sha256: db9342725537e8246c117e0f7bd3945f2a3941380337a6c2a09e3ca2f1f7ee69
+downloaded_at: '2026-10-01T16:37:33+00:00'
+local_changes:
+- local method documentation/configs/scripts only
+- upstream source remains unmodified

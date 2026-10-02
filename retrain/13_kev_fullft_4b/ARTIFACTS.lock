@@ -1,0 +1,27 @@
+format: 1
+method: kev-style_full-ft-4b
+status: Proposed upper-bound reproduction; not trained
+source:
+  repo: https://github.com/jaredpalmer/kev
+  ref: main
+  commit: 90512f1c517d977741f2104470a40635408236c9
+  resolved_ref: released/04_kev_4b/upstream
+base:
+  model: Qwen/Qwen3.5-4B-Base
+  revision: 1001bb4d826a52d1f399e183466143f4da7b741b
+checkpoint:
+  model: none
+  revision: null
+data:
+  recipe: controlled Nimble-derived decisions
+  manifest: data/manifests/manifest.json
+  hashes:
+    manifest_sha256: 69c3e8930b7602ed8922348772081d56862e4446fa0b0b4e0e84da8149d826de
+    files:
+    - path: manifests/manifest.json
+      size_bytes: 126
+      sha256: 69c3e8930b7602ed8922348772081d56862e4446fa0b0b4e0e84da8149d826de
+downloaded_at: '2026-10-01T16:37:33+00:00'
+local_changes:
+- local method documentation/configs/scripts only
+- upstream source remains unmodified

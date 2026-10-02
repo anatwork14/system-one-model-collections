@@ -1,0 +1,9 @@
+name: system-one-qwen35-4b
+channels: [pytorch, nvidia, conda-forge]
+dependencies:
+  - python>=3.10
+  - pip
+  - git
+  - pip:
+      - -r environment/base_requirements.txt
+      # Install a CUDA-matched PyTorch build separately for the target host.

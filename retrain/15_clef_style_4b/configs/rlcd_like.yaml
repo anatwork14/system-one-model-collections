@@ -1,0 +1,6 @@
+status: deferred_until_supervised_model_is_stable
+identity: RLCD-like reproduction; not Cloudflare's unpublished RLCD implementation
+ordinal_reward: 1 - abs(predicted_index - target_index) / (num_levels - 1)
+complete_record_reward: all_questions_exact
+reference_penalty: beta * KL(policy || supervised_reference)
+coefficients: local hyperparameters to be preregistered before this stage

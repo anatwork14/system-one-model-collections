@@ -1,0 +1,26 @@
+method: clef_style_qwen35_4b
+status: our_reproduction
+source:
+  publisher: Cloudflare
+  announcement_date: 2026-10-01
+  repo: Cloudflare/clef-flash
+  revision: 17f0b0ad64efb65d273590632833508766b2aae6
+  architecture_file: released/05_clef_flash_9b/weights/architecture/joint_schema_model.py
+  head_config: released/05_clef_flash_9b/weights/architecture/joint_head_config.json
+reference_base:
+  repo: Qwen/Qwen3.5-9B
+  revision: not_pinned_locally; not downloaded by request
+target_base:
+  repo: Qwen/Qwen3.5-4B
+  revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+  local_path: shared/models/qwen3.5-4b
+training:
+  exact_cloudflare_training_code_available: false
+  exact_cloudflare_dataset_available: false
+  exact_rlcd_available: false
+  brier_weight: local_configurable_value
+local_changes:
+  - initialized a fresh joint head for Qwen3.5-4B hidden size 2560
+  - use an open Nimble-derived surrogate dataset
+  - configured explicit Qwen3.5 language LoRA targets; not claimed to match Cloudflare
+  - any RL stage must be identified as RLCD-like reproduction

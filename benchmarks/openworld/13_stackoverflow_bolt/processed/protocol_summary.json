@@ -1,0 +1,20 @@
+{
+  "dataset": "stackoverflow_bolt",
+  "fold": "known75",
+  "classes": {
+    "all": 20,
+    "known": 15,
+    "unseen": 5
+  },
+  "records": {
+    "train_known": 8997,
+    "closed": 4493,
+    "unknown_absent": 5991,
+    "unseen_supplied": 1498
+  },
+  "split_source": "BOLT known75 class partition applied to the original pinned raw dataset splits; BOLT's processed row sampling is not substituted.",
+  "notes": [
+    "OW-1 includes known and held-out-class examples; held-out targets are UNKNOWN.",
+    ""
+  ]
+}

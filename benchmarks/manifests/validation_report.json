@@ -1,0 +1,132 @@
+{
+  "status": "passed",
+  "datasets": {
+    "jevbench_public": {
+      "path": "system_one/00_jevbench",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "bb05a335bc809e61b20c0f745d25499a82b326fc",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "banking77": {
+      "path": "system_one/01_banking77",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "57ec275d8078af65b7731c2a98be812d844a6d6b",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "clinc150_oos": {
+      "path": "system_one/02_clinc150_oos",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "828f8093932c8fe6ca7936c3d2e52903b1c523de",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "boolq": {
+      "path": "system_one/03_boolq",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "35b264d03638db9f4ce671b711558bf7ff0f80d5",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "goemotions": {
+      "path": "system_one/04_goemotions",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "add492243ff905527e67aeb8b80c082af02207c3",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "when2call": {
+      "path": "system_one/05_when2call",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "ecc8d42388e91ab37e7e737d48e16e8ecea3d1dc",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "bfcl": {
+      "path": "system_one/06_bfcl",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "banking77_bolt": {
+      "path": "openworld/10_banking77_bolt",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "2c935438b5506febcfd23e499e3de81868236b17",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "clinc150_bolt": {
+      "path": "openworld/11_clinc150_bolt",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "2c935438b5506febcfd23e499e3de81868236b17",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "hwu64_bolt": {
+      "path": "openworld/12_hwu64_bolt",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "2c935438b5506febcfd23e499e3de81868236b17",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "stackoverflow_bolt": {
+      "path": "openworld/13_stackoverflow_bolt",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "2c935438b5506febcfd23e499e3de81868236b17",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "cifar10": {
+      "path": "vision/20_cifar10",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "0b2714987fa478483af9968de7c934580d0bb9a2",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "oxford_iiit_pets": {
+      "path": "vision/21_oxford_pets",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "sha256:e470640c72d033371fb8a3cd8aa7cb6e2a28906c0895003ab53a5a93215c0ce5",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    },
+    "flowers102": {
+      "path": "vision/22_flowers102",
+      "downloaded": true,
+      "validated": true,
+      "source_revision": "sha256:1d7fdbd27dddc71945cb19de5e68a5b459fd8010ab0f62607e61d688ab76ed7d",
+      "missing_metadata": [],
+      "checksum_mismatches": [],
+      "files_missing_checksums": []
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,14 @@
+{
+  "group": "system_one",
+  "datasets": [
+    "jevbench_public",
+    "banking77",
+    "clinc150_oos",
+    "boolq",
+    "goemotions",
+    "when2call",
+    "bfcl"
+  ],
+  "training_allowed": false,
+  "status": "prepared_validated"
+}

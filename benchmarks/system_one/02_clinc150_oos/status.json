@@ -1,0 +1,17 @@
+{
+  "downloaded": true,
+  "validated": true,
+  "prepared": true,
+  "examples": 23700,
+  "classes": 150,
+  "source_revision": "828f8093932c8fe6ca7936c3d2e52903b1c523de",
+  "checksum_verified": true,
+  "prepared_counts": {
+    "oos_val": 100,
+    "val": 3000,
+    "train": 15000,
+    "oos_test": 1000,
+    "test": 4500,
+    "oos_train": 100
+  }
+}

@@ -1,0 +1,32 @@
+dataset_id: cifar10
+source_type: hub
+source:
+  url: https://huggingface.co/datasets/uoft-cs/cifar10
+  revision: 0b2714987fa478483af9968de7c934580d0bb9a2
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 60000
+  classes: 10
+raw_hashes:
+  raw/.gitattributes: 40e650854e43f5d4a0efaa68f487161e1226e22bc5480bd0effa0a8dadb5b848
+  raw/README.md: ee4ef8c07afad77a1105b9b6fb93f0ed9325cb7568739b6ae0e7d8d905c78548
+  raw/plain_text/train-00000-of-00001.parquet: 8428b53a88a11ac374111006708df51469e315a22ac6d66470afd9c78d2ae883
+  raw/plain_text/test-00000-of-00001.parquet: 841389e6f2d64f28bf17310e430aebac20ec3ba611a3c5e231dc93c645ce84de
+  raw/.cache/huggingface/.gitignore: 684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1
+  raw/.cache/huggingface/CACHEDIR.TAG: f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d
+  raw/.cache/huggingface/trees/0b2714987fa478483af9968de7c934580d0bb9a2.json: 4c185dbcacccc10ed420ba6bd4be8758a137c3fa33d1d1aacb507b4820bc8897
+  raw/.cache/huggingface/download/.gitattributes.metadata: 7a003cc4ec84b1cdee4a5f0f29eddd7b003090105a43f2288968a817c57a6f34
+  raw/.cache/huggingface/download/README.md.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/.gitattributes.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/README.md.metadata: d13de2d912fa29792d0a126d53ece021303577e2f75315716fe28961d5c00154
+  raw/.cache/huggingface/download/plain_text/train-00000-of-00001.parquet.metadata: 227c92aac22312d2571d3a4da43a1ee7386bf6946a5b04907e8e84ff1fe38c67
+  raw/.cache/huggingface/download/plain_text/test-00000-of-00001.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/plain_text/train-00000-of-00001.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/plain_text/test-00000-of-00001.parquet.metadata: 675515a22fb0d4d8110f5a3e0f2ddc556f2e145e97ff044d796582cf1d07b961
+transform_version: v1
+status: downloaded
+notes:
+  raw_unique: true
+pinned_at: '2026-10-02'

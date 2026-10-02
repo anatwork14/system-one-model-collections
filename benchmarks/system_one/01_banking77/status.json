@@ -1,0 +1,13 @@
+{
+  "downloaded": true,
+  "validated": true,
+  "prepared": true,
+  "examples": 13083,
+  "classes": 77,
+  "source_revision": "57ec275d8078af65b7731c2a98be812d844a6d6b",
+  "checksum_verified": true,
+  "prepared_counts": {
+    "train": 10003,
+    "test": 3080
+  }
+}

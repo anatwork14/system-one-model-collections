@@ -1,0 +1,25 @@
+{
+  "dataset": "banking77_bolt",
+  "fold": "known75",
+  "classes": [
+    "activate_my_card",
+    "age_limit",
+    "atm_support",
+    "balance_not_updated_after_bank_transfer",
+    "card_about_to_expire",
+    "card_acceptance",
+    "card_delivery_estimate",
+    "card_payment_not_recognised",
+    "card_payment_wrong_exchange_rate",
+    "cash_withdrawal_charge",
+    "compromised_card",
+    "contactless_not_working",
+    "exchange_rate",
+    "get_physical_card",
+    "pin_blocked",
+    "receiving_money",
+    "terminate_account",
+    "virtual_card_not_working",
+    "visa_or_mastercard"
+  ]
+}

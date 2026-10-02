@@ -1,0 +1,45 @@
+{
+  "dataset": "stackoverflow_bolt",
+  "fold": "known75",
+  "known_classes": [
+    "scala",
+    "oracle",
+    "hibernate",
+    "cocoa",
+    "osx",
+    "sharepoint",
+    "matlab",
+    "haskell",
+    "wordpress",
+    "spring",
+    "magento",
+    "svn",
+    "ajax",
+    "bash",
+    "excel"
+  ],
+  "unseen_classes": [
+    "apache",
+    "drupal",
+    "linq",
+    "qt",
+    "visual-studio"
+  ],
+  "raw_split_counts": {
+    "train": 11996,
+    "dev": 1998,
+    "test": 5991
+  },
+  "derived_counts": {
+    "train_known": 8997,
+    "closed": 4493,
+    "unknown_absent": 5991,
+    "unseen_supplied": 1498
+  },
+  "protocols": [
+    "OW-0-closed",
+    "OW-1-unknown-absent",
+    "OW-2-runtime-supplied"
+  ],
+  "source_note": "BOLT fold defines class membership; evaluation rows are derived from the referenced pinned raw source."
+}

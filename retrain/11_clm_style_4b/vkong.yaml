@@ -1,0 +1,24 @@
+# App
+type: task
+app: clm-4b-parallel
+srcs: [scripts, configs, data/processed, data/manifests]
+
+# Compute
+gpu: RTX 4090
+num_gpus: 1
+cpu_cores: 8
+ram_gb: 32
+disk_gb: 80
+
+# Budget
+max_dph: 1.00
+verified_only: true
+
+# Storage
+storage: clm-training
+cache: [huggingface]
+
+# Runtime
+image: pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime
+init_cmd: pip install transformers==5.17.0 sentencepiece==0.2.2
+start: bash scripts/vkong_train.sh

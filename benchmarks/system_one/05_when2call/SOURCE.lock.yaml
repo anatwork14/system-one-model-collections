@@ -1,0 +1,18 @@
+dataset_id: when2call
+source_type: git
+source:
+  url: https://github.com/NVIDIA/When2Call.git
+  revision: ecc8d42388e91ab37e7e737d48e16e8ecea3d1dc
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 3652
+  classes: null
+raw_hashes:
+  raw/when2call_test_mcq.jsonl: 8c3694e583eeeb8dbc297e6cd90da70efc68efa4b6adb7227523e828c6b7b14c
+transform_version: v1
+status: pinned
+notes:
+  raw_unique: true
+pinned_at: '2026-10-02'

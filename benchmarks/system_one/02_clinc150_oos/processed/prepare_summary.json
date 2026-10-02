@@ -1,0 +1,12 @@
+{
+  "dataset": "clinc150_oos",
+  "splits": {
+    "oos_val": 100,
+    "val": 3000,
+    "train": 15000,
+    "oos_test": 1000,
+    "test": 4500,
+    "oos_train": 100
+  },
+  "schema": "decision_record.v1"
+}

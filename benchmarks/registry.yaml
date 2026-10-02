@@ -1,0 +1,149 @@
+version: 1
+principles:
+  unique_raw_downloads: 12
+  canonical_raw_storage: benchmarks/system_one
+  overlays_may_reference_raw: true
+  do_not_overwrite: true
+datasets:
+  jevbench_public:
+    id: S0
+    group: system_one
+    path: system_one/00_jevbench
+    raw_unique: true
+    expected_examples: 231
+    source: https://github.com/fstandhartinger/jevbench.git
+    revision: bb05a335bc809e61b20c0f745d25499a82b326fc
+    status: prepared_validated
+  banking77:
+    id: S1
+    group: system_one
+    path: system_one/01_banking77
+    raw_unique: true
+    expected_examples: 13083
+    classes: 77
+    source: https://github.com/PolyAI-LDN/task-specific-datasets
+    revision: 57ec275d8078af65b7731c2a98be812d844a6d6b
+    status: prepared_validated
+    reused_by:
+    - openworld/10_banking77_bolt
+  clinc150_oos:
+    id: S2
+    group: system_one
+    path: system_one/02_clinc150_oos
+    raw_unique: true
+    expected_examples: 23700
+    classes: 150
+    source: https://github.com/clinc/oos-eval.git
+    revision: 828f8093932c8fe6ca7936c3d2e52903b1c523de
+    status: prepared_validated
+    reused_by:
+    - openworld/11_clinc150_bolt
+  boolq:
+    id: S3
+    group: system_one
+    path: system_one/03_boolq
+    raw_unique: true
+    expected_examples: 12697
+    source: https://huggingface.co/datasets/google/boolq
+    revision: 35b264d03638db9f4ce671b711558bf7ff0f80d5
+    status: prepared_validated
+  goemotions:
+    id: S4
+    group: system_one
+    path: system_one/04_goemotions
+    raw_unique: true
+    expected_examples: 58011
+    classes: 28
+    source: https://huggingface.co/datasets/google-research-datasets/go_emotions
+    revision: add492243ff905527e67aeb8b80c082af02207c3
+    status: prepared_validated
+  when2call:
+    id: S5
+    group: system_one
+    path: system_one/05_when2call
+    raw_unique: true
+    expected_examples: 3652
+    source: https://github.com/NVIDIA/When2Call.git
+    revision: ecc8d42388e91ab37e7e737d48e16e8ecea3d1dc
+    status: prepared_validated
+  bfcl:
+    id: S6
+    group: system_one
+    path: system_one/06_bfcl
+    raw_unique: true
+    expected_examples: null
+    source: https://github.com/ShishirPatil/gorilla.git
+    revision: 6ea57973c7a6097fd7c5915698c54c17c5b1b6c8
+    status: prepared_validated
+  banking77_bolt:
+    id: O0
+    group: openworld
+    path: openworld/10_banking77_bolt
+    raw_unique: false
+    expected_examples: 13072
+    classes: 77
+    raw_ref: system_one/01_banking77/raw
+    source: https://github.com/CNIC-DSL/BOLT.git
+    revision: 2c935438b5506febcfd23e499e3de81868236b17
+    status: prepared_validated
+  clinc150_bolt:
+    id: O1
+    group: openworld
+    path: openworld/11_clinc150_bolt
+    raw_unique: false
+    expected_examples: 22495
+    classes: 150
+    raw_ref: system_one/02_clinc150_oos/raw
+    source: https://github.com/CNIC-DSL/BOLT.git
+    revision: 2c935438b5506febcfd23e499e3de81868236b17
+    status: prepared_validated
+  hwu64_bolt:
+    id: O2
+    group: openworld
+    path: openworld/12_hwu64_bolt
+    raw_unique: true
+    expected_examples: 9677
+    classes: 64
+    source: https://github.com/CNIC-DSL/BOLT.git
+    revision: 2c935438b5506febcfd23e499e3de81868236b17
+    status: prepared_validated
+  stackoverflow_bolt:
+    id: O3
+    group: openworld
+    path: openworld/13_stackoverflow_bolt
+    raw_unique: true
+    expected_examples: 19985
+    classes: 20
+    source: https://github.com/CNIC-DSL/BOLT.git
+    revision: 2c935438b5506febcfd23e499e3de81868236b17
+    status: prepared_validated
+  cifar10:
+    id: V0
+    group: vision
+    path: vision/20_cifar10
+    raw_unique: true
+    expected_examples: 60000
+    classes: 10
+    source: https://huggingface.co/datasets/uoft-cs/cifar10
+    revision: 0b2714987fa478483af9968de7c934580d0bb9a2
+    status: prepared_validated
+  oxford_iiit_pets:
+    id: V1
+    group: vision
+    path: vision/21_oxford_pets
+    raw_unique: true
+    expected_examples: 7349
+    classes: 37
+    source: https://www.robots.ox.ac.uk/~vgg/data/pets/
+    revision: sha256:e470640c72d033371fb8a3cd8aa7cb6e2a28906c0895003ab53a5a93215c0ce5
+    status: prepared_validated
+  flowers102:
+    id: V2
+    group: vision
+    path: vision/22_flowers102
+    raw_unique: true
+    expected_examples: 8189
+    classes: 102
+    source: https://www.robots.ox.ac.uk/~vgg/data/flowers/102/
+    revision: sha256:1d7fdbd27dddc71945cb19de5e68a5b459fd8010ab0f62607e61d688ab76ed7d
+    status: prepared_validated

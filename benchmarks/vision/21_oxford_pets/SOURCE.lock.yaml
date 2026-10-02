@@ -1,0 +1,36 @@
+dataset_id: oxford_iiit_pets
+source_type: artifact
+source:
+  url: https://www.robots.ox.ac.uk/~vgg/data/pets/
+  revision: sha256:e470640c72d033371fb8a3cd8aa7cb6e2a28906c0895003ab53a5a93215c0ce5
+  transfer:
+    type: pinned_hub_mirror
+    url: https://huggingface.co/datasets/Donghyun99/Oxford-IIIT-Pet
+    revision: 371061c33e62f8df8e3f7fc533bedd7680f5855e
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 7349
+  classes: 37
+raw_hashes:
+  raw/.gitattributes: a2bdf429c1bc3858213bb4b7a748fa36a71536a5a1ff98861281853c3c2be1f2
+  raw/README.md: c05df2f4ea0ee986a0e2d010cd2d9954e4798dcceee7e3048b7d2aa20a80afd0
+  raw/data/train-00000-of-00001-7c589a6a5d9c385f.parquet: a4e703b6d04953799fe64e613391362568329ee63e7a54062f7c8fcb50154757
+  raw/data/test-00000-of-00001-fcb5a4d7cd48c7db.parquet: 7f281a9c8f38d57dc95dd5d91ff9230fddb83b5fcdca1688c0540f952dcc7d62
+  raw/.cache/huggingface/.gitignore: 684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1
+  raw/.cache/huggingface/CACHEDIR.TAG: f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d
+  raw/.cache/huggingface/trees/371061c33e62f8df8e3f7fc533bedd7680f5855e.json: e87dc911b45d61f7622670fc994802c60d859e932880d2709e2e6dbf023f11ba
+  raw/.cache/huggingface/download/.gitattributes.metadata: c269bd4a3f2a3311fbdb84b5f9a5bb845600f3af1d2b710414736876d1f64830
+  raw/.cache/huggingface/download/README.md.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/.gitattributes.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/README.md.metadata: 0559f7567b7c4c664fedc06c7e7ff95d27d54cb5c9d357087be5ad74b71b04cd
+  raw/.cache/huggingface/download/data/test-00000-of-00001-fcb5a4d7cd48c7db.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  raw/.cache/huggingface/download/data/test-00000-of-00001-fcb5a4d7cd48c7db.parquet.metadata: d22f5e688a081a1bf0f9218ef32b0f5a19f8c0d733ceac516f5fb88344965922
+  raw/.cache/huggingface/download/data/train-00000-of-00001-7c589a6a5d9c385f.parquet.metadata: 74b28cef7959699d6d61e67ad7c6cc6ba6134d2e0f90760c6eaa095b6f40f167
+  raw/.cache/huggingface/download/data/train-00000-of-00001-7c589a6a5d9c385f.parquet.lock: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+transform_version: v1
+status: downloaded
+notes:
+  raw_unique: true
+pinned_at: '2026-10-02'

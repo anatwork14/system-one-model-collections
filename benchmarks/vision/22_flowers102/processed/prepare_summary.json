@@ -1,0 +1,9 @@
+{
+  "dataset": "flowers102",
+  "splits": {
+    "train": 1020,
+    "validation": 1020,
+    "test": 6149
+  },
+  "schema": "decision_record.v1"
+}

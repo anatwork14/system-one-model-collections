@@ -1,0 +1,161 @@
+{
+  "status": "prepared",
+  "note": "Dataset presence and released splits are recorded. Method-specific exposure is unknown until experiment registrations declare each model's training sources.",
+  "methods_registered": [],
+  "datasets": {
+    "jevbench_public": {
+      "path": "system_one/00_jevbench",
+      "source_revision": "bb05a335bc809e61b20c0f745d25499a82b326fc",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": false,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 231
+    },
+    "banking77": {
+      "path": "system_one/01_banking77",
+      "source_revision": "57ec275d8078af65b7731c2a98be812d844a6d6b",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": true,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 13083
+    },
+    "clinc150_oos": {
+      "path": "system_one/02_clinc150_oos",
+      "source_revision": "828f8093932c8fe6ca7936c3d2e52903b1c523de",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": true,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 23700
+    },
+    "boolq": {
+      "path": "system_one/03_boolq",
+      "source_revision": "35b264d03638db9f4ce671b711558bf7ff0f80d5",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": true,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 12697
+    },
+    "goemotions": {
+      "path": "system_one/04_goemotions",
+      "source_revision": "add492243ff905527e67aeb8b80c082af02207c3",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": false,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 58011
+    },
+    "when2call": {
+      "path": "system_one/05_when2call",
+      "source_revision": "ecc8d42388e91ab37e7e737d48e16e8ecea3d1dc",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": false,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 3652
+    },
+    "bfcl": {
+      "path": "system_one/06_bfcl",
+      "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": false,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": null
+    },
+    "banking77_bolt": {
+      "path": "openworld/10_banking77_bolt",
+      "source_revision": "2c935438b5506febcfd23e499e3de81868236b17",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": true,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 13072
+    },
+    "clinc150_bolt": {
+      "path": "openworld/11_clinc150_bolt",
+      "source_revision": "2c935438b5506febcfd23e499e3de81868236b17",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": true,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 22495
+    },
+    "hwu64_bolt": {
+      "path": "openworld/12_hwu64_bolt",
+      "source_revision": "2c935438b5506febcfd23e499e3de81868236b17",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": true,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 9677
+    },
+    "stackoverflow_bolt": {
+      "path": "openworld/13_stackoverflow_bolt",
+      "source_revision": "2c935438b5506febcfd23e499e3de81868236b17",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": true,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 19985
+    },
+    "cifar10": {
+      "path": "vision/20_cifar10",
+      "source_revision": "0b2714987fa478483af9968de7c934580d0bb9a2",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": true,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 60000
+    },
+    "oxford_iiit_pets": {
+      "path": "vision/21_oxford_pets",
+      "source_revision": "sha256:e470640c72d033371fb8a3cd8aa7cb6e2a28906c0895003ab53a5a93215c0ce5",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": true,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 7349
+    },
+    "flowers102": {
+      "path": "vision/22_flowers102",
+      "source_revision": "sha256:1d7fdbd27dddc71945cb19de5e68a5b459fd8010ab0f62607e61d688ab76ed7d",
+      "raw_downloaded": true,
+      "download_validated": true,
+      "normalized_prepared": true,
+      "training_split_present": true,
+      "evaluation_split_present": true,
+      "model_exposure": "unknown_until_method_registered",
+      "expected_or_observed_examples": 8189
+    }
+  }
+}

@@ -1,0 +1,24 @@
+dataset_id: hwu64_bolt
+source_type: git
+source:
+  url: https://github.com/CNIC-DSL/BOLT.git
+  revision: 2c935438b5506febcfd23e499e3de81868236b17
+license: VERIFY_UPSTREAM_TERMS
+license_url: VERIFY_UPSTREAM_TERMS
+downloaded_at: '2026-10-02'
+expected:
+  examples: 9677
+  classes: 64
+raw_hashes:
+  raw/origin_data/dev.tsv: 8805cedbc77b1f31179d8025ec3ac3d8581b6b66ff9810650484ba222417bb71
+  raw/origin_data/test.tsv: 145b1250a4e8ad6cfacf58cf5bda3ec8a481241b1eb3e8a059f52a35aaf19aea
+  raw/origin_data/train.tsv: 722e81ac1c7bb44c5acd3749afd88b8f64415a9051a3904cb5817bf4e5cb617e
+transform_version: v1
+status: prepared
+notes:
+  raw_unique: true
+  protocol_hashes:
+    splits/known75/hwu_label.list: b87ee0fe5f478e0a766110ae1236d4442330158bfa6e104db59ab09666ea12e1
+    splits/known75/hwu_label_known_0.75.list: d2bbfd06442832a96d8a10c307dd4bd74e4ceba0e4eb9af11a84dbf12b4f39fd
+  protocol_artifacts_pinned: true
+pinned_at: '2026-10-02'

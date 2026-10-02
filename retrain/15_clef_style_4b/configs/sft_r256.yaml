@@ -1,0 +1,14 @@
+stage: lora
+rank: 256
+epochs: 1
+max_length: 2048
+microbatch: 1
+gradient_accumulation: 8
+precision: fp16 on CUDA; fp32 on CPU
+gradient_checkpointing: planned; not enabled in initial small-run trainer
+learning_rates:
+  head: 0.0001
+  lora: 0.00002
+loss:
+  label_smoothing: 0.05
+  brier_weight: 0.1 # local ablation value; Cloudflare coefficient unpublished

@@ -1,0 +1,21 @@
+{
+  "dataset": "stackoverflow_bolt",
+  "fold": "known75",
+  "classes": [
+    "scala",
+    "oracle",
+    "hibernate",
+    "cocoa",
+    "osx",
+    "sharepoint",
+    "matlab",
+    "haskell",
+    "wordpress",
+    "spring",
+    "magento",
+    "svn",
+    "ajax",
+    "bash",
+    "excel"
+  ]
+}

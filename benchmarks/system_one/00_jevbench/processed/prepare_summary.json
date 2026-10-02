@@ -1,0 +1,9 @@
+{
+  "dataset": "jevbench_public",
+  "splits": {
+    "original": 72,
+    "easy": 48,
+    "hard": 111
+  },
+  "schema": "decision_record.v1"
+}

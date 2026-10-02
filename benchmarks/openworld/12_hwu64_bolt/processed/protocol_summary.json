@@ -1,0 +1,20 @@
+{
+  "dataset": "hwu64_bolt",
+  "fold": "known75",
+  "classes": {
+    "all": 64,
+    "known": 48,
+    "unseen": 16
+  },
+  "records": {
+    "train_known": 5575,
+    "closed": 747,
+    "unknown_absent": 1032,
+    "unseen_supplied": 285
+  },
+  "split_source": "BOLT known75 class partition applied to the original pinned raw dataset splits; BOLT's processed row sampling is not substituted.",
+  "notes": [
+    "OW-1 includes known and held-out-class examples; held-out targets are UNKNOWN.",
+    ""
+  ]
+}

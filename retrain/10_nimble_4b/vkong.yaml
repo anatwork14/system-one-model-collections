@@ -1,0 +1,24 @@
+# App
+type: task
+app: nimble-4b-first-run
+srcs: [scripts, configs, data/raw, upstream/nimble, upstream/requirements/training.txt]
+
+# Compute
+gpu: RTX 4090
+num_gpus: 1
+cpu_cores: 8
+ram_gb: 32
+disk_gb: 80
+
+# Budget
+max_dph: 1.00
+verified_only: true
+
+# Storage
+storage: nimble-training
+cache: [huggingface]
+
+# Runtime
+image: pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime
+init_cmd: pip install -r upstream/requirements/training.txt
+start: bash scripts/vkong_train.sh

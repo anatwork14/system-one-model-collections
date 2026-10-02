@@ -1,0 +1,92 @@
+{
+  "downloaded_at": "2026-10-01T16:38:57+00:00",
+  "sources": {
+    "released/00_semif/upstream": {
+      "repo": "https://github.com/iwillcodeu/openjev.git",
+      "requested_ref": "master",
+      "commit": "b9cb32537e78be65f19abfcb1de8fc504b627d84"
+    },
+    "released/01_simple_jev/upstream": {
+      "repo": "https://github.com/featherless-ai/simple-jev.git",
+      "requested_ref": "main",
+      "commit": "12a96cae1741ef42cd630d25e8050c1329746f67"
+    },
+    "released/02_tev1_4b/upstream": {
+      "repo": "https://github.com/togethercomputer/tev1.git",
+      "requested_ref": "main",
+      "commit": "1dde7782382c9f49d627153759b8d1deab426ce0"
+    },
+    "released/03_jevk5_4b/upstream": {
+      "repo": "https://github.com/allebee/jevk5.git",
+      "requested_ref": "main",
+      "commit": "f26426d16f59e8bbe1470e5b162cc89329e29b29"
+    },
+    "released/04_kev_4b/upstream": {
+      "repo": "https://github.com/jaredpalmer/kev.git",
+      "requested_ref": "main",
+      "commit": "90512f1c517d977741f2104470a40635408236c9"
+    },
+    "retrain/10_nimble_4b/upstream": {
+      "repo": "https://github.com/bespokelabsai/nimble.git",
+      "requested_ref": "main",
+      "commit": "62076b4f2d365b5879dafcf7f6dd072a1fe76df7"
+    },
+    "retrain/11_clm_style_4b/upstream": {
+      "repo": "https://github.com/Contrastive-LM/CLM.git",
+      "requested_ref": "main",
+      "commit": "bb42c6c5bf914fd449bed2f6ca65be80602cb1f7"
+    },
+    "retrain/12_pointer_head_only_4b/upstream": {
+      "shared_source": "released/04_kev_4b/upstream",
+      "commit": "90512f1c517d977741f2104470a40635408236c9"
+    },
+    "retrain/13_kev_fullft_4b/upstream": {
+      "shared_source": "released/04_kev_4b/upstream",
+      "commit": "90512f1c517d977741f2104470a40635408236c9"
+    }
+  },
+  "models": {
+    "Qwen/Qwen3.5-4B": {
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "path": "shared/models/qwen3.5-4b",
+      "file_count": 15
+    },
+    "Qwen/Qwen3.5-4B-Base": {
+      "revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+      "path": "shared/models/qwen3.5-4b-base",
+      "file_count": 14
+    },
+    "togethercomputer/Tev1-4B-experimental": {
+      "revision": "0b7becf017daa0e5eb222f8ce7483c8c8259c52f",
+      "path": "released/02_tev1_4b/weights/model",
+      "file_count": 14
+    },
+    "alibiserikbay/JevK5": {
+      "revision": "c4f7fdb3aeab5582336406e78d3bef11bf98833d",
+      "path": "released/03_jevk5_4b/weights/model",
+      "file_count": 11
+    },
+    "jaredpalmer/kev-4b": {
+      "revision": "139fdd94f1b6a6ad80cc15e08fcb99cac885a101",
+      "path": "released/04_kev_4b/weights/released",
+      "file_count": 17
+    }
+  },
+  "status": "sources_models_and_initial_datasets_prepared",
+  "datasets": {
+    "nimble": {
+      "path": "shared/datasets/nimble",
+      "train": 2676,
+      "frozen_eval": 324,
+      "manifest_sha256": "2f3c9343c4143260f584f6fed50480f063b51c1aec929519cb7b542bd88b4def"
+    },
+    "tev1_new_v1": {
+      "path": "released/02_tev1_4b/data/original_recipe/new-v1",
+      "counts": {
+        "train": 37840,
+        "dev": 4568
+      },
+      "manifest_sha256": "16016ea6b725acd9acef80e0f0d389b8425c932baddcfefab3996013d025a0e2"
+    }
+  }
+}

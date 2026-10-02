@@ -1,0 +1,216 @@
+{
+  "status": "passed",
+  "datasets": {
+    "jevbench_public": {
+      "validated": true,
+      "details": {
+        "splits": {
+          "original": 72,
+          "easy": 48,
+          "hard": 111
+        },
+        "raw_files": 3,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "banking77": {
+      "validated": true,
+      "details": {
+        "splits": {
+          "train": 10003,
+          "test": 3080
+        },
+        "classes": 77,
+        "raw_files": 17,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "clinc150_oos": {
+      "validated": true,
+      "details": {
+        "source_splits": {
+          "oos_val": 100,
+          "val": 3000,
+          "train": 15000,
+          "oos_test": 1000,
+          "test": 4500,
+          "oos_train": 100
+        },
+        "raw_files": 1,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "boolq": {
+      "validated": true,
+      "details": {
+        "splits": {
+          "train": 9427,
+          "validation": 3270
+        },
+        "raw_files": 15,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "goemotions": {
+      "validated": true,
+      "details": {
+        "raw_unique_examples": 58011,
+        "planning_note_examples": 58009,
+        "annotation_rows": 211225,
+        "hub_annotation_rows": 211225,
+        "filtered_splits": {
+          "train": 43410,
+          "validation": 5426,
+          "test": 5427
+        },
+        "raw_files": 24,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "when2call": {
+      "validated": true,
+      "details": {
+        "test_requests": 3652,
+        "raw_files": 1,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "bfcl": {
+      "validated": true,
+      "details": {
+        "selected_records": {
+          "BFCL_v4_simple_python.json": 400,
+          "BFCL_v4_irrelevance.json": 240
+        },
+        "raw_files": 4,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "banking77_bolt": {
+      "validated": true,
+      "details": {
+        "all_classes": 77,
+        "known_classes": 58,
+        "unseen_classes": 19,
+        "raw_files": 0,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "clinc150_bolt": {
+      "validated": true,
+      "details": {
+        "all_classes": 150,
+        "known_classes": 112,
+        "unseen_classes": 38,
+        "raw_files": 0,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "hwu64_bolt": {
+      "validated": true,
+      "details": {
+        "all_classes": 64,
+        "known_classes": 48,
+        "unseen_classes": 16,
+        "raw_splits": {
+          "train": 7712,
+          "dev": 933,
+          "test": 1032
+        },
+        "raw_files": 3,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "stackoverflow_bolt": {
+      "validated": true,
+      "details": {
+        "all_classes": 20,
+        "known_classes": 15,
+        "unseen_classes": 5,
+        "raw_splits": {
+          "train": 11996,
+          "dev": 1998,
+          "test": 5991
+        },
+        "raw_files": 3,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "cifar10": {
+      "validated": true,
+      "details": {
+        "splits": {
+          "train": 50000,
+          "test": 10000
+        },
+        "raw_files": 15,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "oxford_iiit_pets": {
+      "validated": true,
+      "details": {
+        "splits": {
+          "train": 3680,
+          "test": 3669
+        },
+        "raw_files": 15,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    },
+    "flowers102": {
+      "validated": true,
+      "details": {
+        "splits": {
+          "train": 1020,
+          "validation": 1020,
+          "test": 6149
+        },
+        "raw_files": 18,
+        "sha256_verified": true,
+        "unhashed_files": [],
+        "checksum_mismatches": []
+      },
+      "errors": []
+    }
+  }
+}

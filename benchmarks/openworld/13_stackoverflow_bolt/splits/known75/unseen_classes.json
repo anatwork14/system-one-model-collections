@@ -1,0 +1,11 @@
+{
+  "dataset": "stackoverflow_bolt",
+  "fold": "known75",
+  "classes": [
+    "apache",
+    "drupal",
+    "linq",
+    "qt",
+    "visual-studio"
+  ]
+}

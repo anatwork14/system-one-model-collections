@@ -1,0 +1,20 @@
+{
+  "dataset": "clinc150_bolt",
+  "fold": "known75",
+  "classes": {
+    "all": 150,
+    "known": 112,
+    "unseen": 38
+  },
+  "records": {
+    "train_known": 11200,
+    "closed": 3360,
+    "unknown_absent": 5500,
+    "unseen_supplied": 1140
+  },
+  "split_source": "BOLT known75 class partition applied to the original pinned raw dataset splits; BOLT's processed row sampling is not substituted.",
+  "notes": [
+    "OW-1 includes known and held-out-class examples; held-out targets are UNKNOWN.",
+    "Native CLINC OOS examples are marked separately from BOLT held-out intents."
+  ]
+}

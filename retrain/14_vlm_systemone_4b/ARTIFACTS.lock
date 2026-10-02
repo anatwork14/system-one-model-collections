@@ -1,0 +1,21 @@
+format: 1
+method: vlm_system-one_4b
+status: NOT_STARTED — placeholder only
+source:
+  repo: none
+  ref: none
+  commit: null  # tools/fetch_all.py resolves and writes the immutable SHA
+base:
+  model: Qwen/Qwen3.5-4B multimodal checkpoint (exact selected revision to be pinned later)
+  revision: deferred
+checkpoint:
+  model: none
+  revision: null  # resolved from Hub model_info during fetch; none for baseline-only methods
+data:
+  recipe: none
+  manifest: data/manifests/manifest.json
+  hashes: not-downloaded
+downloaded_at: null
+local_changes:
+  - local method documentation/configs/scripts only
+  - upstream source remains unmodified
