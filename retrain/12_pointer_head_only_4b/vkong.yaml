@@ -1,0 +1,20 @@
+# App
+type: task
+app: pointer-head-only-clean
+srcs: [scripts, configs, data/processed, data/manifests, upstream/kev, upstream/LICENSE, requirements-vkong.txt]
+
+# Compute
+gpu: Any
+num_gpus: 1
+cpu_cores: 4
+ram_gb: 24
+disk_gb: 80
+
+# Budget
+
+# Storage
+
+# Runtime
+image: pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime
+init_cmd: pip install -r requirements-vkong.txt
+start: bash scripts/vkong_train.sh

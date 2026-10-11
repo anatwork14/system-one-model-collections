@@ -1,0 +1,37 @@
+{
+  "source_file": "upstream/data/gsm8k_verify.json",
+  "sha256": "75d1cb9b69a5f2a1a84b9b003497e766217e73836e7808f088d6c0b3d32c467a",
+  "bytes": 2874415,
+  "solver": "Qwen/Qwen3-0.6B",
+  "source_seed": 0,
+  "rows": 8404,
+  "source_split_counts": {
+    "train": 7144,
+    "test": 1260
+  },
+  "source_label_counts": {
+    "train": {
+      "true": 3819,
+      "false": 3325
+    },
+    "test": {
+      "true": 628,
+      "false": 632
+    }
+  },
+  "source_split_question_overlap": 0,
+  "rlcd_split_seed": 0,
+  "rlcd_split_counts": {
+    "train": 4000,
+    "dev": 500,
+    "test": 1260
+  },
+  "rlcd_split_uid_hashes": {
+    "train": "37b138a61a9208601875c651a00a7c95c650be6e14aaebc08187fdb8876241aa",
+    "dev": "b470aa74259c5fb400902f762436d70382592708ef50a4ff0aaa9b64bd406db0",
+    "test": "e69570f7e73863a26c63d2c7edbced3d14c265e6995937ecaae78e6be98c0e3a"
+  },
+  "rlcd_uid_overlap": false,
+  "test_source_split": "GSM8K original test",
+  "selection_and_calibration_use_same_dev_pool": true
+}

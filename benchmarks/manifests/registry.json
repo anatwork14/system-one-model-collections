@@ -162,7 +162,7 @@
       "expected_examples": 8189,
       "classes": 102,
       "source": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/",
-      "revision": "sha256:1d7fdbd27dddc71945cb19de5e68a5b459fd8010ab0f62607e61d688ab76ed7d",
+      "revision": "sha256:324483c525aff9eccdc09c8471b512b471a328cc5d7c6c4a06682f83c6d1e98b",
       "status": "prepared_validated"
     }
   }

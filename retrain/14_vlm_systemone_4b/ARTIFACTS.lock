@@ -1,21 +1,22 @@
 format: 1
 method: vlm_system-one_4b
-status: NOT_STARTED — placeholder only
+status: V1_IMPLEMENTED — DATA_AND_RUNTIME_BLOCKED
 source:
-  repo: none
+  repo: none  # local V1 trainer; no upstream trainer checkout selected
   ref: none
-  commit: null  # tools/fetch_all.py resolves and writes the immutable SHA
+  commit: null
 base:
-  model: Qwen/Qwen3.5-4B multimodal checkpoint (exact selected revision to be pinned later)
-  revision: deferred
+  model: Qwen/Qwen3.5-4B
+  revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
 checkpoint:
   model: none
   revision: null  # resolved from Hub model_info during fetch; none for baseline-only methods
 data:
-  recipe: none
+  recipe: none_selected_license_and_split_gate_open
   manifest: data/manifests/manifest.json
-  hashes: not-downloaded
+  hashes: none_no_dataset_selected
 downloaded_at: null
 local_changes:
-  - local method documentation/configs/scripts only
+  - local fresh-head V1 training, prediction, strict split audit, progress logging, and checkpoint/resume path
+  - no dataset selected; image rights and group-safe splits remain a hard gate
   - upstream source remains unmodified

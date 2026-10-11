@@ -2,26 +2,30 @@
 import argparse, json, time
 from pathlib import Path
 import torch, yaml
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoTokenizer, Qwen3_5ForConditionalGeneration
 from train_contrastive import PairHeads, render
 
 p = argparse.ArgumentParser()
 p.add_argument("--config", type=Path, required=True)
 p.add_argument("--input", type=Path, required=True)
 p.add_argument("--output", type=Path, required=True)
-p.add_argument("--checkpoint", type=Path, default=Path("weights/clm-heads"))
+p.add_argument("--checkpoint", type=Path, default=Path("weights/clm-heads-clean"))
 p.add_argument("--device", default="cuda")
 a = p.parse_args()
-cfg = json.loads((a.checkpoint / "config.json").read_text())
+cfg = json.loads((a.checkpoint / "config.json").read_text(encoding="utf-8"))
 yaml.safe_load(a.config.read_text(encoding="utf-8"))
 tok = AutoTokenizer.from_pretrained(a.checkpoint)
-model = AutoModelForCausalLM.from_pretrained(cfg["base"], dtype=torch.bfloat16, device_map=a.device).eval()
+model = Qwen3_5ForConditionalGeneration.from_pretrained(
+    cfg["base"], revision=cfg["revision"], dtype=torch.bfloat16,
+    attn_implementation="sdpa").to(a.device).eval()
+model.config.use_cache = False
 heads = PairHeads(cfg["hidden_size"], cfg["projection_dim"]).to(a.device)
 heads.load_state_dict(torch.load(a.checkpoint / "heads.pt", map_location=a.device, weights_only=True)); heads.eval()
 def vec(content):
     ids = render(tok, "user", content).to(a.device)
     with torch.inference_mode():
-        out = model(input_ids=ids, use_cache=False, output_hidden_states=True, return_dict=True)
+        out = model(input_ids=ids, attention_mask=torch.ones_like(ids), use_cache=False,
+                    output_hidden_states=True, return_dict=True)
     return out.hidden_states[-1][0, -1].float()
 a.output.parent.mkdir(parents=True, exist_ok=True)
 with a.input.open(encoding="utf-8") as src, a.output.open("w", encoding="utf-8") as dst:

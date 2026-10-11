@@ -2,6 +2,7 @@
 """Check targets, schema membership, split-family isolation, and variant provenance."""
 
 import json
+import argparse
 from pathlib import Path
 
 
@@ -19,7 +20,8 @@ def options(question):
         return {str(value) for value in question["criteria"]}
     if question["type"] == "score":
         return {str(index) for index in range(len(question["criteria"]))}
-    raise ValueError(f"unsupported question type: {question['type']}")
+    question_type = question["type"]
+    raise ValueError(f"unsupported question type: {question_type}")
 
 
 def target_id(question):
@@ -30,8 +32,14 @@ def target_id(question):
 
 
 def main():
-    splits = {name: read(DATA / name / "nimble.jsonl") for name in ("train", "calibration", "dev")}
-    splits["test"] = read(DATA / "test/nimble_frozen.jsonl")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--training-only", action="store_true",
+                        help="Validate train/calibration/dev without opening the frozen test file")
+    args = parser.parse_args()
+    split_names = ("train", "calibration", "dev")
+    splits = {name: read(DATA / name / "nimble.jsonl") for name in split_names}
+    if not args.training_only:
+        splits["test"] = read(DATA / "test/nimble_frozen.jsonl")
     family_sets = {name: {row["family"] for row in rows} for name, rows in splits.items()}
     for left, a in family_sets.items():
         for right, b in family_sets.items():
@@ -57,7 +65,7 @@ def main():
     order_changed = sum(list(row["questions"]) != source_orders[row["source_id"]] for row in variants)
     if order_changed == 0:
         raise AssertionError("question-order variants did not change model input order")
-    report = {"records": record_count, "questions": question_count, "train_only_variants": len(variants), "question_order_changed": order_changed, "family_disjoint": True, "targets_in_schema": True}
+    report = {"records": record_count, "questions": question_count, "train_only_variants": len(variants), "question_order_changed": order_changed, "family_disjoint": True, "targets_in_schema": True, "test_file_opened": not args.training_only}
     print(json.dumps(report, indent=2))
 
 

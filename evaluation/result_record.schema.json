@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:system-one:evaluation:prediction-record:v1",
+  "title": "Normalized decision-model prediction record",
+  "type": "object",
+  "required": [
+    "id", "method", "base_model", "checkpoint_revision", "dataset", "split",
+    "label", "input_tokens", "num_options", "predicted_option", "probabilities", "latency_ms"
+  ],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "method": {"type": "string", "minLength": 1},
+    "base_model": {"type": "string", "minLength": 1},
+    "checkpoint_revision": {"type": "string", "minLength": 1},
+    "dataset": {"type": "string", "minLength": 1},
+    "split": {"type": "string", "minLength": 1},
+    "label": {"type": "string", "minLength": 1},
+    "predicted_option": {"type": "string"},
+    "probabilities": {
+      "type": "object",
+      "minProperties": 2,
+      "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "input_tokens": {"type": "integer", "minimum": 0},
+    "num_options": {"type": "integer", "minimum": 2},
+    "latency_ms": {"type": "number", "minimum": 0},
+    "router_latency_ms": {"type": "number", "minimum": 0},
+    "gpu_seconds": {"type": "number", "minimum": 0},
+    "gpu_wall_seconds": {"type": "number", "minimum": 0},
+    "num_gpus": {"type": "integer", "minimum": 1},
+    "run_id": {"type": "string"},
+    "peak_vram_mb": {"type": "number", "minimum": 0},
+    "cost_usd": {"type": "number", "minimum": 0},
+    "inference_success": {"type": "boolean"},
+    "task_success": {"type": "number", "minimum": 0, "maximum": 1},
+    "served_locally": {"type": "boolean"},
+    "external_offload": {"type": "boolean"},
+    "escalated": {"type": "boolean"},
+    "dataset_manifest_sha256": {"type": "string"},
+    "source_revision": {"type": "string"},
+    "training_datasets": {"type": "array", "items": {"type": "string"}},
+    "training_splits": {"type": "array", "items": {"type": "string"}},
+    "public_pretraining_exposure": {"enum": ["known", "unknown"]},
+    "training_data_manifest_sha256": {"type": "string"},
+    "unknown_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "domain_group": {"enum": ["in_domain", "ood"]},
+    "pair_id": {"type": "string"},
+    "variant_role": {"enum": ["baseline", "variant"]},
+    "choice_semantics": {"type": "object", "additionalProperties": {"type": "string"}},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": true
+}

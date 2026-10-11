@@ -2,7 +2,7 @@
 
 ## 1. Status
 
-Proposed ablation; not trained
+Legacy exploratory 20-epoch artifacts exist; corrected training has not run
 
 ## 2. Family
 
@@ -59,11 +59,11 @@ Candidate cross-entropy over pointer scores.
 
 ## 14. Training data
 
-Initial controlled set is the 2,676 Nimble train records, converted to Kev's row format; optional Kev decision-v7 extension is a separate experiment and must not be mixed into the first controlled result.
+Use the shared 2,268-row inner training split in Kev's row format; the 408-row source-family-disjoint inner-dev split selects the checkpoint. The released 324-row evaluation split is excluded from training and model selection. Optional Kev decision-v7 extension is a separate experiment and must not be mixed into the first controlled result.
 
 ## 15. Training configuration
 
-Same train IDs/split/seed as other controlled arms; proposed seed 17. Head optimizer settings are in configs/pointer_head.yaml and must be frozen before full run.
+Same inner train IDs/split/seed as other controlled arms; seed 17. State context is 2,048 tokens, with Kev's corresponding expanded branch and packed limits, so the 405-token first record is not dropped or truncated. The corrected launcher uses LR 1e-4, finite-score/loss/gradient checks, gradient clipping, patience-based stopping, and selects by inner-dev mean loss. Head settings are in `configs/pointer_head.yaml`.
 
 ## 16. Published artifacts
 
@@ -79,7 +79,7 @@ Kev upstream pointer implementation as read-only source; local `pointer_head.pt`
 
 ## 18. Inference
 
-After training, score the frozen Nimble holdout with `scripts/eval.sh`. The small local inference wrapper loads the pinned Kev pointer implementation and frozen base directly. No training executed.
+The old `weights/head_only-vkong` run selected its best epoch on the released 324-row evaluation split and has very large losses; its scores are invalid as a held-out estimate. The corrected launcher writes a fresh checkpoint and `scripts/eval.sh` reports inner-dev metrics. The small inference wrapper loads the pinned Kev pointer implementation and frozen base directly. No corrected run is claimed yet.
 
 ## 19. Expected resources
 

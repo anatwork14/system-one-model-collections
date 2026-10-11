@@ -1,9 +1,9 @@
 model: Qwen/Qwen3.5-4B
 revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
-data_dir: data/raw
+data_dir: data/inner_split
 train_file: train.jsonl
-validation_file: eval.jsonl
-output_dir: weights/nimble-4b
+validation_file: validation.jsonl
+output_dir: weights/nimble-4b-clean
 learning_rate: 5.0e-5
 lora_rank: 16
 seed: 17
@@ -11,9 +11,9 @@ batch_size: 2
 gradient_accumulation: 4
 max_length: 2048
 epochs: 1
-max_steps: 1005
-warmup_steps: 101
-save_steps: 335
+max_steps: computed_from_inner_train_rows
+warmup_steps: ten_percent_of_optimizer_steps
+save_steps: one_epoch
 precision: bf16
 objective: candidate_only_cross_entropy
-evaluation_policy: frozen_holdout_never_used_for_tuning
+evaluation_policy: family_disjoint_inner_dev_only; outer_324_rows_never_loaded_by_training

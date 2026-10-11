@@ -1,0 +1,18 @@
+base_model: Qwen/Qwen3.5-4B
+base_revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+base_model_path: shared/models/qwen3.5-4b
+base_config_sha256: ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670
+serialization: released/05_clef_flash_9b/weights/architecture/joint_schema_model.py
+serialization_sha256: 0e304cf7c6500e8bb59bef7e2afd2c6373f82596dfb3b57d1aa93c175e2dc3a3
+serialization_revision: workspace-local source; SHA256 pinned above
+head_config: released/05_clef_flash_9b/weights/architecture/joint_head_config.json
+head_config_sha256: 77efe959a38b5b17b241543e129e695f3c77465ece55a25985279bd8176279a0
+head_config_revision: workspace-local source; SHA256 pinned above
+data_source: retrain/10_nimble_4b/data/inner_split/{train,validation}.jsonl
+train_source_sha256: 96120cc63f6c149cb4bca4c0066a8f3c2ec124a3aa1cf13f82e514393c35304d
+dev_source_sha256: 96f86f36bfe7512fdc8dcadc8c313e9d83cb2cf5625224d4633e2bf7f17a6a59
+controlled_train_sha256: 96659ce9d91f54082aaebdf588b235b6d15b68598f6203e50e57c95d04aaf70d
+controlled_dev_sha256: f6695b97ebed0dd2e6816f926bec88970b0deab840f29bff89d8033fd311fc98
+controlled_train_count: 2268
+controlled_dev_count: 408
+outer_eval_policy: never load during P0 or exit selection

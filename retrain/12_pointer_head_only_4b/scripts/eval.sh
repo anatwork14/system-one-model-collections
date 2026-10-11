@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
-[[ -f weights/head_only/pointer_head.pt ]] || { echo "Checkpoint missing: run train.sh with CONFIRM_TRAIN=yes first." >&2; exit 2; }
-python scripts/infer.py --input ../10_nimble_4b/data/processed/kev_eval.jsonl --output results/eval.jsonl
-python ../../evaluation/metrics/compute_metrics.py results/eval.jsonl > results/metrics.json
+checkpoint="${1:-weights/head_only-clean}"
+[[ -f "$checkpoint/pointer_head.pt" ]] || { echo "Checkpoint missing: $checkpoint" >&2; exit 2; }
+python3 scripts/infer.py --checkpoint "$checkpoint" --input data/processed/kev_dev_inner.jsonl --output results/dev_predictions.jsonl
+python3 ../../evaluation/standardize_training_eval.py M12 \
+  --native results/dev_predictions.jsonl --source data/processed/kev_dev_inner.jsonl \
+  --output results/dev_metric_predictions.jsonl
+python3 ../../evaluation/metrics/compute_metrics.py results/dev_metric_predictions.jsonl --output results/dev_metrics.json

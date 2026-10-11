@@ -59,7 +59,7 @@ Candidate pointer cross-entropy.
 
 ## 14. Training data
 
-Same 2,676 Nimble train rows and frozen 324 evaluation rows for the first controlled comparison; labels synthetic/model-checked.
+Same 2,268 inner-train rows as the other controlled arms; a separate 408-row family-disjoint inner-dev split is reserved for diagnostics. Full fine-tuning has a fixed one-epoch recipe and does not select checkpoints on dev. The released 324-row evaluation split is not loaded by the trainer. Labels are synthetic/model-checked.
 
 ## 15. Training configuration
 
@@ -79,7 +79,7 @@ Kev upstream pointer implementation; local full checkpoint under weights/fullft.
 
 ## 18. Inference
 
-After training, score the frozen Nimble holdout with `scripts/eval.sh`; for a service, start `python -m kev.serve --run weights/full_ft`. No training executed.
+The clean launcher requires a fresh output directory and consumes only `data/processed/kev_train_inner.jsonl`. `scripts/eval.sh` reports inner-dev diagnostics. The VKong config is a task (it exits when training finishes) and requests 96 GB host RAM for the full-precision optimizer masters and moments. No training executed.
 
 ## 19. Expected resources
 

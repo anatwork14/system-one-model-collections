@@ -21,7 +21,7 @@ The benchmark suite defines 14 evaluation entries backed by 12 unique raw datase
 
 The raw sources are pinned and downloaded. Observed split counts and raw SHA-256 values are recorded in `manifests/download_report.json`, each `SOURCE.lock.yaml`, and the checksum files. GoEmotions' pinned source has two more distinct IDs than the planning estimate; its annotation-row count and benchmark filtered splits were cross-checked.
 
-Oxford Pets and Flowers-102 were transferred from pinned Hugging Face mirrors after the official Oxford host proved too slow to complete reliably. The original Oxford source URLs and mirror revisions are both recorded in their source locks. Check upstream use and redistribution terms before sharing downloaded files.
+Flowers-102 was downloaded from the official Oxford archive and its official split metadata. Oxford Pets uses a pinned Hugging Face transfer mirror because the official host drops the large image archive transfer and does not support resuming it. Check upstream use and redistribution terms before sharing downloaded files.
 
 ## Deliberately deferred
 

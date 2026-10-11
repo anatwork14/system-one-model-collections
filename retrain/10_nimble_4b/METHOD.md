@@ -2,7 +2,7 @@
 
 ## 1. Status
 
-Proposed reproduction; not trained
+Legacy exploratory training artifacts exist; clean retraining with the corrected split has not run
 
 ## 2. Family
 
@@ -79,7 +79,7 @@ No published 4B checkpoint. Upstream Nimble trainer/data; local adapter output i
 
 ## 18. Inference
 
-After training: bash scripts/eval.sh. Train entry point: bash scripts/train.sh. No training is run by workspace setup.
+The legacy VKong artifacts under `weights/nimble-4b-vkong*` used a three-epoch run and reported metrics on the released 324-row evaluation set. Treat those results as exploratory and do not use them as a final test. The corrected launchers prepare a family-disjoint inner train/dev split from the 2,676 source training records, compute the one-epoch step schedule from that split, and train into a new clean output directory. The released 324-row evaluation file is not passed to training. Run `CONFIRM_TRAIN=yes bash scripts/train.sh` on a supported GPU host; no clean rerun is claimed yet.
 
 ## 19. Expected resources
 

@@ -1,0 +1,21 @@
+method: adas1_layer_probe
+base_model: shared/models/qwen3.5-4b
+base_revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+source_train: ../10_nimble_4b/data/inner_split/train.jsonl
+source_dev: ../10_nimble_4b/data/inner_split/validation.jsonl
+outer_test_policy: never_read_during_probe_or_exit_selection
+layers: [4, 8, 12, 16, 20, 24, 28, 32]
+max_length: 2048
+minimum_gpu_memory_gib: 24
+precision: bf16
+feature_cache_dtype: float16
+probe:
+  projection_dim: 256
+  hidden_dim: 128
+  learning_rate: 0.001
+  weight_decay: 0.01
+  brier_weight: 0.1
+  epochs: 20
+  patience: 4
+  seed: 17
+selection_metric: inner_dev_mean_question_nll

@@ -2,7 +2,7 @@
 
 ## 1. Status
 
-Proposed controlled reproduction; not trained
+Legacy exploratory training artifacts exist; a clean inner-dev rerun has not run
 
 ## 2. Family
 
@@ -59,11 +59,11 @@ Batch InfoNCE: -log exp(sim(z_s,z_pos)/τ) divided by the sum over positive and 
 
 ## 14. Training data
 
-Derive positive state→correct-candidate pairs from the same 2,676 Nimble train examples; other allowed candidates become hard negatives. Do not use the 324 holdout for training. Original labels are synthetic/model-checked.
+Derive positive state→correct-candidate pairs from the 2,268-row inner training split; other allowed candidates become hard negatives. A 408-row family-disjoint inner-dev split selects the checkpoint. The released 324-row evaluation set is not loaded. Original labels are synthetic/model-checked.
 
 ## 15. Training configuration
 
-Proposed: 20 epochs, AdamW LR 1e-3, projection dimension 512, seed 17, one request per update; frozen backbone vectors are cached before head optimization. The 2048-token limit applies to each state or candidate prompt. This small-data recipe is a reproduction design, not official CLM training config.
+Proposed clean run: up to 20 epochs, AdamW LR 1e-4, projection dimension 512, seed 17, one request per update; frozen backbone vectors are cached before head optimization. Select the lowest inner-dev loss with patience 5. The 2048-token limit applies to every state or candidate prompt. This small-data recipe is a reproduction design, not official CLM training config.
 
 ## 16. Published artifacts
 
@@ -79,7 +79,7 @@ No Qwen3.5-4B published checkpoint. CLM upstream implementation is a reference; 
 
 ## 18. Inference
 
-After training: `python scripts/infer.py --config configs/clm.yaml --input ../10_nimble_4b/data/processed/eval_pairs.jsonl --output results/eval.jsonl`. `scripts/eval.sh` also computes the frozen-holdout metrics. Training launcher is `scripts/train.sh`; not executed here.
+The old checkpoint in `weights/clm-heads-vkong` was evaluated against the released outer split during training; treat it as exploratory. The corrected launcher writes to a fresh clean checkpoint and selects on inner dev. `scripts/eval.sh` reports inner-dev metrics only. No corrected run is claimed yet.
 
 ## 19. Expected resources
 

@@ -1,0 +1,9 @@
+{
+  "model_id": "Qwen/Qwen3.5-4B",
+  "revision": "c7429d5a8ed57f4a9cfdaf1af76a8943eba0ae97",
+  "revision_source": "Hugging Face model repository immutable commit",
+  "requested_dtype": "bfloat16",
+  "trust_remote_code": false,
+  "architecture": "Qwen3_5ForCausalLM loaded from official checkpoint text_config",
+  "notes": "Text-only GSM8K task; vision modules are not instantiated. GPU compatibility and logits equivalence remain pending a VKong smoke run."
+}

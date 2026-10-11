@@ -1,0 +1,21 @@
+# App
+type: service
+app: kev-fullft-transfer
+srcs: [scripts, configs, data/processed, data/manifests, upstream/kev, upstream/LICENSE, requirements-vkong.txt]
+
+# Compute
+gpu: L4
+num_gpus: 1
+cpu_cores: 8
+ram_gb: 96
+disk_gb: 100
+
+# Budget
+
+# Storage
+
+# Runtime
+app_port: 8000
+image: pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime
+init_cmd: pip install -r requirements-vkong.txt
+start: python3 scripts/vkong_transfer_service.py

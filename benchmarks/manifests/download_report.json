@@ -205,7 +205,9 @@
           "validation": 1020,
           "test": 6149
         },
-        "raw_files": 18,
+        "official_archive_images": 8189,
+        "label_entries": 8189,
+        "raw_files": 3,
         "sha256_verified": true,
         "unhashed_files": [],
         "checksum_mismatches": []

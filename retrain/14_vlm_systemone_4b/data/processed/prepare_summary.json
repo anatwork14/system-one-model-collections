@@ -1,0 +1,15 @@
+{
+  "source_archive_sha256": "2d01ecc807db462958cfe3d92f57a8c252b4abd240eb955770201e45f783b246",
+  "class_count": 102,
+  "candidate_count": 4,
+  "splits": {
+    "train": 916,
+    "model_validation": 1016,
+    "calibration": 102,
+    "test": 6137
+  },
+  "unique_images_extracted": 8189,
+  "removed_exact_duplicate_rows": 4,
+  "removed_perceptual_duplicate_rows": 14,
+  "manifest": "data/manifests/manifest.json"
+}

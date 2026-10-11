@@ -48,7 +48,9 @@ def main() -> int:
                 ref = yaml.safe_load(ref_file.read_text())
                 ref_path = (path / ref["raw_path"]).resolve()
                 downloaded = ref_path.is_dir() and any(file.is_file() for file in ref_path.rglob("*"))
-                if not ref_path.is_relative_to(ROOT.resolve()):
+                try:
+                    ref_path.relative_to(ROOT.resolve())
+                except ValueError:
                     failures.append(f"{key}: raw_ref escapes benchmarks directory")
         hashes = parse_checksums(path / "checksums.sha256")
         actual = {file.relative_to(path).as_posix(): sha256(file)

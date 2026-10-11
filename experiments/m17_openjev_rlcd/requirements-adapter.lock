@@ -1,0 +1,8 @@
+# Python 3.12; adaptation runtime. Torch is supplied by the VKong CUDA image.
+transformers==5.18.0
+peft==0.21.2
+accelerate==1.13.0
+datasets==5.0.1
+numpy==2.5.2
+safetensors==0.7.0
+pytest==9.0.2

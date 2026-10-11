@@ -19,7 +19,7 @@ Local reproduction. No official Cloudflare Clef-4B checkpoint exists. Keep this 
 
 ## Current readiness
 
-The official code and head have been inspected. A fresh 4B-dimension head passes a synthetic mixed-question output-shape check. The initial data recipe creates 2,676 canonical records, group-splits source families into train/calibration/dev, reserves Nimble's 324-row evaluation set as test, and produces schema permutations from training records only.
+The official code and head have been inspected. A fresh 4B-dimension head passes a synthetic mixed-question output-shape check. The initial data recipe creates 2,676 canonical records, group-splits source families into train/calibration/dev, reserves Nimble's 324-row evaluation set as test, and produces schema permutations from training records only. The corrected trainer selects checkpoints only on the family-disjoint dev split, verifies train/dev separation before loading the model, checks finite losses and gradients, and the managed task does not package the test directory.
 
 The host currently exposes a GTX 1080 Ti (11 GB). The installed PyTorch CUDA 13 build is incompatible with its driver, and even a compatible build would not fit a 4B model plus rank-256 training state on this card. Full model training and probability benchmark results remain unrun; use a supported higher-memory CUDA host for those stages.
 

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:system-one:evaluation:routing-outcomes:v1",
+  "title": "Per-request model routing outcome record",
+  "type": "object",
+  "required": ["id", "selected_model", "candidate_outcomes"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "selected_model": {"type": "string", "minLength": 1},
+    "candidate_outcomes": {
+      "type": "object", "minProperties": 1,
+      "additionalProperties": {
+        "type": "object", "required": ["success"],
+        "properties": {
+          "success": {"type": "number", "minimum": 0, "maximum": 1},
+          "utility": {"type": "number"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "route_scores": {"type": "object", "additionalProperties": {"type": "number"}},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": true
+}

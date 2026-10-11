@@ -1,8 +1,8 @@
 model: Qwen/Qwen3.5-4B
 revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
-dataset_manifest: ../10_nimble_4b/data/manifests/manifest.json
-train_split: train
-eval_split: frozen_eval
+dataset_manifest: data/manifests/inner_split.json
+train_split: family_disjoint_inner_train
+validation_split: family_disjoint_inner_dev
 backbone_frozen: true
 state_projection: trainable
 action_projection: trainable
@@ -10,4 +10,6 @@ temperature: trainable_scalar
 objective: candidate_set_infonce
 seed: 17
 max_length: 2048
-status: prepared_recipe_only_no_training
+early_stopping_patience: 5
+selection_metric: inner_dev_mean_loss
+outer_eval_used_for_selection: false

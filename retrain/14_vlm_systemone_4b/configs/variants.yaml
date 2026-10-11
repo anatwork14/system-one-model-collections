@@ -1,8 +1,95 @@
-status: not_started
-variants:
-  - {id: V0, vision: frozen, language: frozen, head: direct_logits}
-  - {id: V1, vision: frozen, language: frozen, head: decision_head}
-  - {id: V2, vision: frozen, language: lora, head: decision_head}
-  - {id: V3, vision: connector_trainable, language: lora, head: decision_head}
-  - {id: V4, vision: upper_blocks_trainable, language: lora, head: decision_head}
-  - {id: V5, vision: full_finetune, language: full_finetune, head: decision_head}
+format: 2
+status: designed_blocked
+primary_model:
+  repo: Qwen/Qwen3.5-4B
+  local_path: shared/models/qwen3.5-4b
+  revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+base_ablation:
+  repo: Qwen/Qwen3.5-4B-Base
+  local_path: shared/models/qwen3.5-4b-base
+  revision: 1001bb4d826a52d1f399e183466143f4da7b741b
+transfer:
+  required_for_v1: false
+  text_winner: null
+  note: >-
+    V1 is a fresh-head baseline and may proceed without a text winner. Any
+    transfer arm remains gated on a validated winner and exact compatibility.
+inference:
+  decision_decode: false
+  candidate_scoring: shared_scalar_head
+  normalization: per_question_softmax
+  temperature_fit_split: calibration
+loss:
+  primary: listwise_cross_entropy_per_question
+  brier_weight_initial: 1.0
+  brier_ablation_weights: [0.0, 0.25, 1.0]
+  selection_metric: validation_nll_plus_0.25_brier
+  counterfactual_grounding: disabled_until_verified_pairs_exist
+stages:
+  - id: V0
+    training: false
+    vision: frozen
+    language: frozen
+    head: none
+    purpose: frozen multimodal baselines and input/API validation
+  - id: V1
+    training: true
+    prompt_version: m14-v1-typed-candidate-v2
+    vision: frozen
+    merger: frozen
+    language: frozen
+    head: linear_2560_to_1
+    learning_rate: 0.0003
+    weight_decay: 0.01
+    epochs: 5
+    early_stopping_patience: 2
+    scheduler: none
+    seed: 17
+    gradient_clip_norm: 1.0
+    precision: bfloat16_when_supported_else_float16
+    max_image_pixels: 786432
+    max_sequence_tokens: 2048
+    minimum_gpu_memory_gib: 23.0
+    progress_log: progress.jsonl
+    resumable_checkpoint: last.pt
+    selected_checkpoint: best.pt
+    starts_after: [dataset_ready, full_leakage_audit_passed, compatible_cuda_runtime, pillow_and_torchvision_installed]
+  - id: V2
+    training: true
+    vision: frozen
+    merger: frozen
+    language: lora
+    lora_rank: 32
+    lora_alpha: 64
+    lora_dropout: 0.0
+    lora_targets: explicit_language_only
+    head: linear_2560_to_1
+    starts_after: [V1_evaluated, text_winner_selected_or_fresh_head_baseline_declared]
+  - id: V3
+    training: conditional
+    vision: frozen
+    merger: trainable
+    language: lora
+    starts_if: V2_text_retention_strong_and_visual_grounding_weak
+  - id: V4
+    training: conditional
+    vision: top_4_blocks_trainable
+    merger: trainable
+    language: lora
+    starts_if: V3_evidence_identifies_visual_representation_bottleneck
+  - id: V5
+    training: upper_bound_only
+    vision: full_finetune
+    merger: trainable
+    language: full_finetune
+    starts_after: [V1_to_V3_path_validated, suitable_multigpu_memory]
+batching:
+  unit: decision_question
+  group_candidates_before_loss: true
+  equal_question_weight: true
+  image_pixel_budget: 786432 # local V1 launch cap; profile/licensed source may justify a separate versioned value
+  max_sequence_tokens: 2048 # reject, do not truncate, candidate branches over this limit
+evaluation:
+  conditions: [full, text_only, image_shuffled, image_only]
+  metrics: [accuracy, nll, brier, ece, aurc, candidate_order_sensitivity, visual_reliance, text_retention, latency, peak_vram]
+  test_and_ood_available_during_training: false

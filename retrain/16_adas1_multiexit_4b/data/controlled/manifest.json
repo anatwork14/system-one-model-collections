@@ -1,0 +1,20 @@
+{
+  "dataset": "nimble-m16-p0-controlled-v1",
+  "source": "retrain/10_nimble_4b/data/inner_split/{train,validation}.jsonl",
+  "source_sha256": {
+    "train": "96120cc63f6c149cb4bca4c0066a8f3c2ec124a3aa1cf13f82e514393c35304d",
+    "dev": "96f86f36bfe7512fdc8dcadc8c313e9d83cb2cf5625224d4633e2bf7f17a6a59"
+  },
+  "controlled_sha256": {
+    "train": "96659ce9d91f54082aaebdf588b235b6d15b68598f6203e50e57c95d04aaf70d",
+    "dev": "f6695b97ebed0dd2e6816f926bec88970b0deab840f29bff89d8033fd311fc98"
+  },
+  "counts": {
+    "train": 2268,
+    "dev": 408
+  },
+  "family_disjoint": true,
+  "source_id_disjoint": true,
+  "outer_324_eval_read": false,
+  "label_caveat": "Synthetic/model-checked Nimble labels; not fully human reviewed."
+}

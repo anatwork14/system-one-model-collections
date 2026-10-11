@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:system-one:evaluation:serving-trace:v1",
+  "title": "Per-request serving measurement record",
+  "type": "object",
+  "required": ["id", "method", "task_success", "latency_ms"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "method": {"type": "string", "minLength": 1},
+    "task_success": {"type": "number", "minimum": 0, "maximum": 1},
+    "latency_ms": {"type": "number", "minimum": 0},
+    "router_latency_ms": {"type": "number", "minimum": 0},
+    "cost_usd": {"type": "number", "minimum": 0},
+    "gpu_seconds": {"type": "number", "minimum": 0},
+    "gpu_wall_seconds": {"type": "number", "minimum": 0},
+    "num_gpus": {"type": "integer", "minimum": 1},
+    "peak_vram_mb": {"type": "number", "minimum": 0},
+    "run_id": {"type": "string"},
+    "served_locally": {"type": "boolean"},
+    "external_offload": {"type": "boolean"},
+    "escalated": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

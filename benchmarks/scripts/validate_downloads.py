@@ -7,6 +7,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+import tarfile
 
 import pyarrow.parquet as pq
 import yaml
@@ -139,10 +140,22 @@ def validate(key: str, item: dict) -> tuple[dict, list[str]]:
         if counts != {"train": 3680, "test": 3669}:
             errors.append(f"Oxford Pets counts differ from official trainval/test: {counts}")
     elif key == "flowers102":
-        counts = {name: parquet_rows(raw, name) for name in ("train", "validation", "test")}
-        details["splits"] = counts
-        if counts != {"train": 1020, "validation": 1020, "test": 6149}:
-            errors.append(f"Flowers-102 official split counts differ from expected: {counts}")
+        if (raw / "102flowers.tgz").is_file():
+            from scipy.io import loadmat
+            labels = loadmat(raw / "imagelabels.mat")["labels"].ravel()
+            sets = loadmat(raw / "setid.mat")
+            counts = {"train": len(sets["trnid"].ravel()), "validation": len(sets["valid"].ravel()),
+                      "test": len(sets["tstid"].ravel())}
+            with tarfile.open(raw / "102flowers.tgz", "r:gz") as archive:
+                images = sum(member.name.lower().endswith((".jpg", ".jpeg")) for member in archive.getmembers())
+            details.update({"splits": counts, "official_archive_images": images, "label_entries": len(labels)})
+            if counts != {"train": 1020, "validation": 1020, "test": 6149} or images != 8189 or len(labels) != 8189:
+                errors.append(f"Flowers-102 official archive or split counts differ from expected: {counts}, images={images}, labels={len(labels)}")
+        else:
+            counts = {name: parquet_rows(raw, name) for name in ("train", "validation", "test")}
+            details["splits"] = counts
+            if counts != {"train": 1020, "validation": 1020, "test": 6149}:
+                errors.append(f"Flowers-102 official split counts differ from expected: {counts}")
 
     lock = yaml.safe_load((path / "SOURCE.lock.yaml").read_text())
     expected_hashes = lock.get("raw_hashes", {})

@@ -44,7 +44,6 @@ HUB_DATASETS = {
     "goemotions": ("google-research-datasets/go_emotions", "add492243ff905527e67aeb8b80c082af02207c"),
     "cifar10": ("uoft-cs/cifar10", "0b2714987fa478483af9968de7c934580d0bb9a2"),
     "oxford_iiit_pets": ("Donghyun99/Oxford-IIIT-Pet", "371061c33e62f8df8e3f7fc533bedd7680f5855e"),
-    "flowers102": ("Donghyun99/Oxford-Flower-102", "7e43fe37eeb9278138ab0bd2d0abb10d0f703d09"),
 }
 DIRECT_FILES = {
     "banking77": [
@@ -72,7 +71,6 @@ OXFORD_FILES = {
 }
 TRANSFER_MIRRORS = {
     "oxford_iiit_pets": "https://huggingface.co/datasets/Donghyun99/Oxford-IIIT-Pet",
-    "flowers102": "https://huggingface.co/datasets/Donghyun99/Oxford-Flower-102",
 }
 GROUPS = {
     "system_one": ["jevbench_public", "banking77", "clinc150_oos", "boolq", "goemotions", "when2call", "bfcl"],
@@ -162,9 +160,8 @@ def download_oxford(key: str, dataset_path: Path) -> None:
     for url in OXFORD_FILES[key]:
         target = raw / url.rsplit("/", 1)[1]
         partial = target.with_suffix(target.suffix + ".part")
-        request = urllib.request.Request(url, headers={"User-Agent": "system-one-benchmark/1.0"})
-        with urllib.request.urlopen(request) as response, partial.open("wb") as output:
-            shutil.copyfileobj(response, output)
+        run(["curl", "--location", "--fail", "--retry", "99", "--retry-delay", "3",
+             "--retry-max-time", "0", "--continue-at", "-", "--output", str(partial), url])
         partial.replace(target)
 
 
@@ -287,6 +284,15 @@ def one(key: str, item: dict) -> None:
         if not answer_target.exists():
             shutil.copy2(answer_source, answer_target)
         update_status(key, dataset_path, item.get("expected_examples"))
+    elif key == "flowers102":
+        stage = raw_stage(dataset_path)
+        download_oxford(key, dataset_path)
+        # A fresh checkout must reproduce the exact pinned official payload.
+        for name, expected in lock.get("raw_hashes", {}).items():
+            staged = stage.parent / ".raw.download" / Path(name).name
+            if staged.is_file() and sha256(staged) != expected:
+                raise RuntimeError(f"official artifact checksum differs from SOURCE.lock.yaml: {name}")
+        promote_raw(dataset_path, stage)
     elif key in HUB_DATASETS:
         existing_raw = dataset_path / "raw"
         if not (key in EXTRA_FILES and existing_raw.exists() and any(existing_raw.iterdir())):

@@ -1,0 +1,4 @@
+Repository: https://github.com/ZimmyGao/openjev-rlcd
+Commit: 22db40ad3333f5cf0bc5139097da70e0f8c05018
+Reference paper: https://arxiv.org/abs/2609.38850
+Pinned on: 2026-10-08

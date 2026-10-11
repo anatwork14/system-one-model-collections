@@ -2,7 +2,10 @@
 
 ## Source
 
-Recipe: `controlled Nimble-derived decisions`. Source repo/artifact and resolved revision are tracked in `../ARTIFACTS.lock`.
+Controlled Nimble-derived decisions. The frozen 2,676-record training split and
+324-record evaluation split are copied byte-for-byte from
+`retrain/10_nimble_4b/data/processed/kev_{train,eval}.jsonl`; training labels come
+from the prepared Nimble references. No evaluation examples are included in training.
 
 ## Local organization
 
@@ -11,4 +14,5 @@ Recipe: `controlled Nimble-derived decisions`. Source repo/artifact and resolved
 - `splits/`: frozen row/family IDs and split purpose.
 - `manifests/manifest.json`: counts, licenses, label origin, hashes, and model-selection use.
 
-No local data files have been fetched yet unless a file is explicitly listed in the manifest. Never use frozen evaluation records for training or model selection.
+The split sizes and SHA-256 checksums are recorded in `manifests/manifest.json`.
+Never use frozen evaluation records for training or model selection.

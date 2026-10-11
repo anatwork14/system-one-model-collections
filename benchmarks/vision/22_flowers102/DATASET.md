@@ -8,7 +8,7 @@ Measure semantic visual classification at 102-way cardinality.
 
 ## 3. Source
 Official URL/repository: https://huggingface.co/datasets/nelorth/oxford-flowers
-Pinned commit/revision: see `SOURCE.lock.yaml`; payload transferred from the pinned Hugging Face mirror `Donghyun99/Oxford-Flower-102` because the official Oxford host was too slow to complete reliably.
+Pinned artifact revision: see `SOURCE.lock.yaml`; images and split metadata were downloaded from the official Oxford archive URLs listed there.
 Downloaded date: 2026-10-02
 
 ## 4. Public availability
@@ -18,7 +18,7 @@ Redistribution allowed: not assumed; raw artifacts remain local and are not redi
 
 ## 5. Dataset size
 Expected: 8,189 images with official train/validation/test split
-Observed: downloaded; see `manifests/download_report.json` for split counts and checksum validation
+Observed: 8,189 official image files; train/validation/test = 1,020/1,020/6,149. Images remain in the official compressed archive and processed records refer to archive members.
 
 ## 6. Classes / labels
 Expected: 102 classes

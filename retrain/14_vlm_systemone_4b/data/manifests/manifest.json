@@ -1,5 +1,62 @@
 {
-  "status": "not_downloaded",
-  "files": [],
-  "notes": "Populate hashes/counts/license/provenance after verified fetch."
+  "format": 2,
+  "status": "ready",
+  "method": "vlm_systemone_4b",
+  "permission_scope": "Internal, non-commercial model training only; no redistribution.",
+  "sources": [
+    {
+      "source": "oxford-flowers-102",
+      "revision": "sha256:324483c525aff9eccdc09c8471b512b471a328cc5d7c6c4a06682f83c6d1e98b",
+      "source_url": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/",
+      "terms_url": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/README.txt",
+      "license": "User-confirmed permission for internal non-commercial training; no public license asserted.",
+      "source_sha256": "2d01ecc807db462958cfe3d92f57a8c252b4abd240eb955770201e45f783b246",
+      "terms_verified": true,
+      "image_rights_verified": true,
+      "authorization_basis": "explicit user confirmation in chat",
+      "authorization_date": "2026-10-07",
+      "commercial_use": false,
+      "redistribution_allowed": false,
+      "transformation": "M14 four-choice serialization v1; three deterministic distractors per image; original pixels unchanged"
+    }
+  ],
+  "splits": {
+    "train": {
+      "path": "processed/train.jsonl",
+      "rows": 916,
+      "sha256": "7d4acbea97cbf3eeb7c0deddcbe413732c8112b41b7fafa1816907f1c4a4f06c"
+    },
+    "model_validation": {
+      "path": "processed/model_validation.jsonl",
+      "rows": 1016,
+      "sha256": "84288e2dd50433f51e72c780d0600ce3c19ae21263970289b68ec5506f63f494"
+    },
+    "calibration": {
+      "path": "processed/calibration.jsonl",
+      "rows": 102,
+      "sha256": "3df949c2050e0ae1db5699b2c9d91b0342fbc5230ddbb5baec3caf0b1ddd151a"
+    },
+    "test": {
+      "path": "processed/test.jsonl",
+      "rows": 6137,
+      "sha256": "96fa784f1650f06e970a4f8acbab78b11ad3344903ba76b75c767a93c69a5555"
+    },
+    "ood": null
+  },
+  "required_checks": {
+    "image_use_terms_verified": true,
+    "image_provenance_recorded": true,
+    "group_disjoint_splits": true,
+    "image_exact_and_perceptual_deduplication": true,
+    "exact_text_and_source_group_leakage_checks": true,
+    "checksums_recorded": true,
+    "test_excluded_from_training_and_model_selection": true
+  },
+  "notes": [
+    "Internal non-commercial pilot only, based on explicit user authorization; do not redistribute source images or derived rows.",
+    "This is four-choice classification over flower names, not a broad image-decision benchmark.",
+    "Original Flowers official train is stratified into train and calibration; original validation is model_validation; original test is test. Exact and near-duplicate images are removed across partitions, preferring test then validation.",
+    "OOD is unavailable because this pilot contains one source/task family.",
+    "One image/question per row; image groups are disjoint across every partition."
+  ]
 }

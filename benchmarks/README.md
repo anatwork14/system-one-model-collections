@@ -60,8 +60,10 @@ Materialize the BOLT `known75` fold first. Derive three evaluation views: OW-0 c
 
 ## Status and reproducibility
 
+See [`METRIC_COVERAGE.md`](METRIC_COVERAGE.md) for how the datasets answer the survey questions, which metric tools are implemented, and which system/model traces are still missing.
+
 `registry.yaml` is the dataset index; `manifests/download_report.json` records observed source split counts and SHA-256 verification. All 14 entries (12 unique raw dataset sources) pass download validation and the normalized JSONL and open-world views have been generated. Per-dataset `status.json` files record preparation counts, and `manifests/prepare_report.json` summarizes normalized record totals and validation status.
 
-Oxford Pets and Flowers-102 payloads came from pinned Hugging Face transfer mirrors because the official Oxford host was too slow to finish reliably. Their official source URLs, mirror revisions, and payload hashes are recorded in their locks. GoEmotions has 58,011 distinct IDs in the pinned raw CSVs (211,225 annotation rows), two more than the 58,009 planning figure; the filtered split counts match the plan exactly.
+Flowers-102 was downloaded from the official Oxford archive. Oxford Pets remains on a pinned Hugging Face transfer mirror: the official Pets image host closes the large transfer and does not accept range requests, so it cannot reliably resume. Source and transfer provenance are recorded in the dataset locks. GoEmotions has 58,011 distinct IDs in the pinned raw CSVs (211,225 annotation rows), two more than the 58,009 planning figure; the filtered split counts match the plan exactly.
 
-Vision `state.image` values point into the owning raw Parquet file as `raw/...parquet#row=N`. This keeps one copy of image bytes; consumers should read that Parquet row rather than expecting an extracted image file. BOLT's known75 files define the class partition. For the two overlay datasets, evaluation rows are derived from the canonical raw source and are not a byte-for-byte copy of BOLT's row sampling.
+Vision `state.image` values point into the owning raw artifact, either as `raw/...parquet#row=N` or `raw/archive.tar.gz#member=...`. This keeps one copy of image bytes; consumers should read that Parquet row or archive member rather than expecting extracted image files. BOLT's known75 files define the class partition. For the two overlay datasets, evaluation rows are derived from the canonical raw source and are not a byte-for-byte copy of BOLT's row sampling.

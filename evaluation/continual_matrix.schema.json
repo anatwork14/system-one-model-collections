@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:system-one:evaluation:continual-matrix:v1",
+  "title": "Continual learning accuracy matrix",
+  "type": "object",
+  "required": ["task_order", "scores"],
+  "properties": {
+    "task_order": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "scores": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["after_task", "task", "score"],
+        "properties": {
+          "after_task": {"type": "string"},
+          "task": {"type": "string"},
+          "score": {"type": "number", "minimum": 0, "maximum": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "baseline": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}},
+    "joint_reference": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}}
+  },
+  "additionalProperties": false
+}

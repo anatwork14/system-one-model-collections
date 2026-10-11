@@ -50,7 +50,14 @@ python3 evaluation/run_all.py --list
 python3 benchmarks/scripts/download_core.py --list
 ```
 
-Released smoke inference requires the relevant model weights and an available inference runtime. Results are recorded separately from benchmarks. Retraining configs and scripts are prepared but are intentionally not run here.
+Released smoke inference requires the relevant model weights and an available inference runtime. Exploratory local runs exist for Nimble, CLM-style contrastive training, and pointer-head-only, but their earlier reports used the outer 324-row evaluation split. Corrected launchers now use a family-disjoint inner train/dev split and fresh output paths; no corrected rerun is claimed yet. Full fine-tuning and Clef-style 4B training remain unrun. M14 V1 now has a guarded training, prediction, leakage-audit, and progress path, but cannot launch until licensed image-decision data and a compatible CUDA runtime are available.
+
+For the single-method and all-method training launcher, its CUDA preflight,
+deferred methods, standard metrics, and report location, see
+[TRAINING_RUNBOOK.md](TRAINING_RUNBOOK.md). A single run starts with
+`python3 scripts/run_training_methods.py M10`; use `all` for all six registered
+local training methods. M14 is included but its launch preflight currently blocks
+it until licensed image-decision data and a compatible CUDA/image runtime are ready.
 
 ## Scientific identity
 

@@ -1,0 +1,24 @@
+{
+  "repository": "https://github.com/ZimmyGao/openjev-rlcd",
+  "commit": "22db40ad3333f5cf0bc5139097da70e0f8c05018",
+  "files": {
+    "LICENSE": "cc6e1df9d59834dbda8cdd3a47693b0635ade906eccbac6ff9eb37dbebc79e81",
+    "README.md": "f993f3a0d29a40979d74f765c30ab200b5fdd3a1d7a96705db6bf39259ea3d69",
+    "data/gsm8k_verify.json": "75d1cb9b69a5f2a1a84b9b003497e766217e73836e7808f088d6c0b3d32c467a",
+    "openjev_rlcd/estimators.py": "8213f1b0b585f268889ddbc92a15402e9dc91d78e89955b3e10667f7563d3b42",
+    "openjev_rlcd/evaluation.py": "2ff113a26827b88b3f1390ce61b10ede5913eb3a66442f65329cd2a7bcc421b8",
+    "openjev_rlcd/final_tables.py": "ab46ee197951bcdc7ed8cb2555cbcbccaea3ec37e4b79ff7de46ec3d2eabb0b2",
+    "openjev_rlcd/metrics.py": "b0c9d7b030e91acc142b23fceb30266ee2cd0761f9a94717e8d8c6c945d3ff47",
+    "openjev_rlcd/tasks/__init__.py": "7adc650eec095716c24bd20f6715ce999eb68545045ca9dbba9a82b44ded1ab5",
+    "openjev_rlcd/tasks/chaosnli.py": "397b110a0bdd20d697885de062f4d7c47f7b21b4e0bdf7eb68611ab40c03fe74",
+    "openjev_rlcd/tasks/gsm8k_verify.py": "5760586a5aff67465d24b85b2b50a9cf1c32925bc9736ecdb1ff764cdb635ad2",
+    "openjev_rlcd/tasks/mmlu_pro.py": "540431b5e6ed64946d31e0fab53e428202c6916ed1efe81388c15d2004979a58",
+    "openjev_rlcd/train.py": "d71fb77dab4b8276d241d5175dfe40881e8d355d48e20d5548c3243f0c02cba6",
+    "openjev_rlcd/train_direct.py": "00cb257cd9eeafd9d3e5669f801db9971d5d5a34d0b35c586d40e34b876276e7",
+    "requirements.txt": "b4f5546d516d7a82b9598163b601180c7c2c72a5fb8440a0278ba85092eb668f",
+    "scripts/common.sh": "cf459736a5114314977bc69abfe7ffc5ba596ca4bfcc8012bed214878fa56800",
+    "scripts/smoke_test.sh": "6a0c64d4194b225006fac0a8bc04c05e7ee1ff6f6101ebb2439c6eb77fe0cf0f",
+    "scripts/two_stage.sh": "1b122d869ca1c1722e43d1a526f810bfbf3854e8d375e1ccfceee20dbef897a3",
+    "tests/test_estimators.py": "e463147baa72dba6b611b6feecf32e30633805b30c39f91f82c366009a519a58"
+  }
+}

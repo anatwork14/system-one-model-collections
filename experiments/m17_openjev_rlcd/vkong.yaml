@@ -1,0 +1,33 @@
+# App
+type: service
+app: m17-openjev-rlcd-qwen35-4b
+srcs:
+  - scripts
+  - configs
+  - manifests
+  - tests
+  - upstream/openjev_rlcd
+  - upstream/data/gsm8k_verify.json
+  - upstream/tests
+  - upstream/scripts/common.sh
+  - upstream/scripts/two_stage.sh
+  - upstream/scripts/smoke_test.sh
+  - upstream/README.md
+  - upstream/LICENSE
+  - upstream/requirements.txt
+  - upstream_commit.txt
+  - requirements-adapter.lock
+
+# Compute: quote and explicit user approval are required before allocation.
+gpu: RTX A6000
+num_gpus: 1
+cpu_cores: 8
+ram_gb: 32
+disk_gb: 100
+verified_only: true
+
+# Runtime
+image: pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime
+init_cmd: pip install -r requirements-adapter.lock
+app_port: 8000
+start: python3 scripts/vkong_transfer_service.py

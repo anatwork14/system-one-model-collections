@@ -1,0 +1,7 @@
+transformers==5.17.0
+datasets>=3.0,<5
+pydantic>=2.9,<3
+peft==0.21.0
+accelerate>=1.15.0
+sentencepiece>=0.2.2
+

@@ -1,1 +1,1 @@
-method,base_model,checkpoint_revision,input_tokens,num_options,predicted_option,probabilities,latency_ms,peak_vram_mb,success,notes
+method,base_model,checkpoint_revision,dataset,split,id,label,input_tokens,num_options,predicted_option,probabilities,latency_ms,router_latency_ms,gpu_seconds,peak_vram_mb,cost_usd,inference_success,task_success,served_locally,external_offload,escalated,notes

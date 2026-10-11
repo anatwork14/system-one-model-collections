@@ -1,5 +1,19 @@
 {
-  "status": "not_downloaded",
-  "files": [],
-  "notes": "Populate hashes/counts/license/provenance after verified fetch."
+  "method": "pointer-head-only-4b",
+  "recipe": "controlled Nimble-derived decisions",
+  "source": "retrain/10_nimble_4b/data/processed/kev_{train,eval}.jsonl",
+  "label_origin": "prepared Nimble reference targets",
+  "splits": {
+    "train": {
+      "path": "data/processed/kev_train.jsonl",
+      "rows": 2676,
+      "sha256": "b80e899e93ee5d07a9aeea87b148e9ae73fc01b59d172357b40586af0057c2e4"
+    },
+    "evaluation": {
+      "path": "data/processed/kev_eval.jsonl",
+      "rows": 324,
+      "sha256": "8998ef6cd4bf9b0f112c11300e47169c3c72212ae2f01979bfa3134e241efb23"
+    }
+  },
+  "evaluation_used_for_training": false
 }

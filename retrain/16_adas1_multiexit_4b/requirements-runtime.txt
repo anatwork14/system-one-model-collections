@@ -1,0 +1,3 @@
+# Install a PyTorch build matched to the host CUDA driver first.
+transformers==5.17.0
+flash-linear-attention[cuda]==0.5.2
